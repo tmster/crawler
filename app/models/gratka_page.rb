@@ -9,8 +9,8 @@ class GratkaPage < Base
 
   def price
     node
-      .root.css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > p > b')
-      .first
+      .root
+      .at_css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > p > b')
       .text
       .scan(/\d/)
       .join('')
@@ -19,24 +19,21 @@ class GratkaPage < Base
   def additional_price
     node
       .root
-      .css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > ul > li:nth-child(2) > b')
-      .first
+      .at_css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > ul > li:nth-child(2) > b')
       .text
   end
 
   def floor
     node
       .root
-      .css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(2) > div')
-      .first
+      .at_css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(2) > div')
       .text
   end
 
   def rooms
     node
       .root
-      .css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(3) > div')
-      .first
+      .at_css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(3) > div')
       .text
   end
 
@@ -63,8 +60,7 @@ class GratkaPage < Base
   def address
     node
       .root
-      .css('#karta-naglowek > div:nth-child(1) > div > h2')
-      .first
+      .at_css('#karta-naglowek > div:nth-child(1) > div > h2')
       .text
       .strip
       .split(' ')
