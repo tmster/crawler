@@ -68,4 +68,8 @@ class GratkaPage < Base
       .drop(3)
       .join(' ')
   end
+
+  def url
+    @url
+  end
 end

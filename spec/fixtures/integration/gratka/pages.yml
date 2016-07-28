@@ -1,0 +1,133 @@
+---
+- :floor: rok
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze ul. Nadwiślańska
+  :location: 50.0469, 19.9512
+  :url: http://dom.gratka.pl/tresc/401-69154375-malopolskie-krakow-podgorze-nadwislanska.html
+  :address: Kraków Podgórze ul. Nadwiślańska, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Podgórze, ul. Nadwiślańska
+  :price: '2300'
+  :additional_price: '350'
+  :rooms: 40 m2
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: Kraków Podgórze ul. Nadwiślańska
+- :floor: do uzgodnienia
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Dębniki ul. Chmieleniec
+  :location: 50.0189, 19.8985
+  :url: http://dom.gratka.pl/tresc/401-28845233-malopolskie-krakow-debniki-chmieleniec.html
+  :address: 30-348 Kraków Dębniki ul. Chmieleniec, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Dębniki, ul. Chmieleniec
+  :price: '1590'
+  :additional_price: '500'
+  :rooms: 52 m2
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: 30-348 Kraków Dębniki ul. Chmieleniec
+- :floor: parter
+  :title: Mieszkanie | Mam do wynajęcia | Kraków
+  :location: 50.0999, 20.0109
+  :url: http://dom.gratka.pl/tresc/401-69005069-malopolskie-krakow.html
+  :address: Kraków, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków
+  :price: '1500'
+  :additional_price: '25'
+  :rooms: '4'
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: Kraków
+- :floor: '2'
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Krowodrza, Czarna Wieś
+  :location: 50.0737, 19.9066
+  :url: http://dom.gratka.pl/tresc/401-69074657-malopolskie-krakow-krowodrza-czarna-wies.html
+  :address: Kraków Krowodrza, Czarna Wieś, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Krowodrza, Czarna Wieś
+  :price: '1250'
+  :additional_price: '350'
+  :rooms: '2'
+  :street: Czarna Wieś
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Krowodrza
+- :floor: do uzgodnienia
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Olsza ul. Piotra Trębacza
+  :location: 50.0813, 19.9598
+  :url: http://dom.gratka.pl/tresc/401-68563589-malopolskie-krakow-olsza-piotra-trebacza.html
+  :address: 31-436 Kraków Olsza ul. Piotra Trębacza, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Olsza, ul. Piotra Trębacza
+  :price: '2500'
+  :additional_price: '43'
+  :rooms: 58 m2
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: 31-436 Kraków Olsza ul. Piotra Trębacza
+- :floor: 35 m2
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Ugorek ul. Długa 47
+  :location: 50.0702, 19.9371
+  :url: http://dom.gratka.pl/tresc/401-69134519-malopolskie-krakow-ugorek-dluga-47.html
+  :address: 31-147 Kraków Ugorek ul. Długa 47, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Ugorek, ul. Długa 47
+  :price: '1800'
+  :additional_price: '51'
+  :rooms: parter
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: 31-147 Kraków Ugorek ul. Długa 47
+- :floor: do uzgodnienia
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze ul. Bujaka
+  :location: 50.0099, 19.948
+  :url: http://dom.gratka.pl/tresc/401-68639567-malopolskie-krakow-podgorze-bujaka.html
+  :address: 30-611 Kraków Podgórze ul. Bujaka, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Podgórze, ul. Bujaka
+  :price: '1300'
+  :additional_price: '18'
+  :rooms: 72 m2
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: 30-611 Kraków Podgórze ul. Bujaka
+- :floor: 60 m2
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze - Dębniki Ruczaj ul. Zbrojarzy
+    Bezpośrednio
+  :location: 50.0228, 19.9188
+  :url: http://dom.gratka.pl/tresc/401-69120577-malopolskie-krakow-podgorze-debniki-ruczaj-zbrojarzy-bezposrednio.html
+  :address: 30-412 Kraków Podgórze - Dębniki Ruczaj ul. Zbrojarzy Bezpośrednio, Powiat
+    Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Podgórze - Dębniki Ruczaj, ul. Zbrojarzy Bezpośrednio
+  :price: '1550'
+  :additional_price: '26'
+  :rooms: '2'
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: 30-412 Kraków Podgórze - Dębniki Ruczaj ul. Zbrojarzy Bezpośrednio
+- :floor: '1'
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Azory ul. Gdyńska
+  :location: 50.0772, 19.9062
+  :url: http://dom.gratka.pl/tresc/401-69158575-malopolskie-krakow-azory-gdynska.html
+  :address: Kraków Azory ul. Gdyńska, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Azory, ul. Gdyńska
+  :price: '900'
+  :additional_price: '150'
+  :rooms: '1'
+  :street: Powiat Kraków
+  :county: Gmina Kraków
+  :city:
+  :district: Kraków Azory ul. Gdyńska
+- :floor: 32,78 m2
+  :title: Mieszkanie | Mam do wynajęcia | Kraków Nowa Huta, Czyżyny
+  :location: 50.0705, 20.0177
+  :url: http://dom.gratka.pl/tresc/401-68952273-malopolskie-krakow-nowa-huta-czyzyny.html
+  :address: Kraków Nowa Huta, Czyżyny, Powiat Kraków, Gmina Kraków
+  :short_title: Mieszkanie Kraków Nowa Huta, Czyżyny
+  :price: '900'
+  :additional_price: '307'
+  :rooms: '3'
+  :street: Czyżyny
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Nowa Huta
