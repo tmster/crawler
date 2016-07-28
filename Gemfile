@@ -9,3 +9,7 @@ group :development do
   gem 'guard-rspec'
   gem 'pry'
 end
+
+group :test do
+  gem 'fakeweb'
+end
