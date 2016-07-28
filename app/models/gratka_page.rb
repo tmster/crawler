@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class GratkaPage < Base
   def title
     node.title
