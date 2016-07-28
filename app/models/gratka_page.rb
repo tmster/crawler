@@ -1,41 +1,59 @@
 # frozen_string_literal: true
 class GratkaPage < Base
+  attr_reader :url
+
   def title
     node.title
   end
 
   def short_title
-    node.root.css('#karta-naglowek > div:nth-child(1) > div > h1').first.text.strip
+    node
+      .root
+      .at_css('#karta-naglowek > div:nth-child(1) > div > h1')
+      .text
+      .strip
   end
 
   def price
     node
       .root
-      .at_css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > p > b')
+      .at_xpath('//*[@id="karta-ogloszenia"]/div/div[2]/div[1]/p/b')
       .text
       .scan(/\d/)
       .join('')
   end
 
   def additional_price
-    node
-      .root
-      .at_css('#karta-ogloszenia > div > div.small-12.large-4.columns > div.cenaGlowna > ul > li:nth-child(2) > b')
-      .text
+    child_node = node
+                 .root
+                 .at_xpath('//*[@id="karta-ogloszenia"]/div/div[2]/div[1]/ul')
+                 .at_xpath('//text()[normalize-space() = \'opłaty:\']')
+
+    child_node.parent.at_css('b').text if child_node
   end
 
   def floor
-    node
-      .root
-      .at_css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(2) > div')
+    details_node
+      .at_xpath('//text()[normalize-space() = \'Piętro\']')
+      .parent
+      .parent
+      .at_css('div')
       .text
   end
 
   def rooms
-    node
-      .root
-      .at_css('#dane-podstawowe > div > div.mieszkanie > ul > li:nth-child(3) > div')
+    details_node
+      .at_xpath('//text()[normalize-space() = \'Liczba pokoi\']')
+      .parent
+      .parent
+      .at_css('div')
       .text
+  end
+
+  def size
+    details_node
+      .at_xpath('//text()[normalize-space() = \'Powierzchnia\']')
+      .parent.parent.at_css('div').text.strip[0..-4].tr(',', '.').to_f
   end
 
   def location
@@ -69,7 +87,11 @@ class GratkaPage < Base
       .join(' ')
   end
 
-  def url
-    @url
+  private
+
+  def details_node
+    @details_node ||= node
+                      .root
+                      .at_xpath('//*[@id="dane-podstawowe"]/div/div[2]/ul')
   end
 end
