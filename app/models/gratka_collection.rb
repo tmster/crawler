@@ -34,10 +34,6 @@ class GratkaCollection < Base
 
   private
 
-  def override_query(value)
-    url_support = UrlSupport.new(url)
-  end
-
   def parse_urls
     collect_urls.map do |url|
       GratkaPage.new(url)

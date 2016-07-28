@@ -15,7 +15,7 @@ class Base
   attr_accessor :agent, :url
 
   def query
-   @query ||= agent.get(url)
+    @query ||= agent.get(url)
   end
 
   def node
