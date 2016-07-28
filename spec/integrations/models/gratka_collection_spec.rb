@@ -2,15 +2,7 @@
 require 'spec_helper'
 
 RSpec.describe GratkaCollection do
-  def fixtures_path
-    @fixtures_path ||= "#{Dir.pwd}/spec/fixtures/integration/gratka/"
-  end
-
-  def read_data(type, number)
-    file_path = fixtures_path + "#{type}-#{number}.html"
-
-    File.open(file_path).read
-  end
+  include_context 'parser file helpers'
 
   let(:url) { 'http://dom.gratka.pl/mieszkania/krakow/wynajem/' }
   let(:url2) { 'http://dom.gratka.pl/mieszkania/krakow/wynajem/?s=2' }
