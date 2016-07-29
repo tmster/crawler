@@ -22,7 +22,7 @@ RSpec.describe GratkaPage do
 
     describe '#to_h' do
       it { expect(subject.to_h.keys).to eq page.keys }
-      # it { expect(subject.to_h).to eq page }
+      it { expect(subject.to_h).to eq page }
     end
 
     page.keys.each do |method|
