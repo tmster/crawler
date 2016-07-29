@@ -65,11 +65,11 @@ class GratkaPage < Base
   end
 
   def county
-    address.split(', ')[2]
+    address.split(', ')[-2]
   end
 
   def city
-    address.split(', ')[3]
+    address.split(', ')[-1]
   end
 
   def district

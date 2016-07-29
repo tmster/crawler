@@ -11,8 +11,8 @@
   :additional_price: '350'
   :rooms: '2'
   :street: ul. Nadwiślańska
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Podgórze
 - :size: 52
   :floor: '2'
@@ -26,8 +26,8 @@
   :additional_price: '500'
   :rooms: '2'
   :street: ul. Chmieleniec
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Dębniki
 - :size: 60
   :floor: parter
@@ -41,8 +41,8 @@
   :additional_price:
   :rooms: '4'
   :street:
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków
 - :size: 40
   :floor: '2'
@@ -71,8 +71,8 @@
   :additional_price:
   :rooms: '3'
   :street: ul. Piotra Trębacza
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Olsza
 - :size: 35
   :floor: 'parter'
@@ -86,8 +86,8 @@
   :additional_price:
   :rooms: '2'
   :street: ul. Długa 47
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Ugorek
 - :size: 72
   :floor: '4'
@@ -101,8 +101,8 @@
   :additional_price:
   :rooms: '3'
   :street: ul. Bujaka
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Podgórze
 - :size: 60
   :floor: '2'
@@ -118,8 +118,8 @@
   :additional_price:
   :rooms: '3'
   :street: ul. Zbrojarzy Bezpośrednio
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Podgórze - Dębniki Ruczaj
 - :size: 23
   :floor: '1'
@@ -133,8 +133,8 @@
   :additional_price: '150'
   :rooms: '1'
   :street: ul. Gdyńska
-  :county: Gmina Kraków
-  :city:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
   :district: Kraków Azory
 - :size: 32.78
   :floor: '3'
