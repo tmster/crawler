@@ -1,7 +1,6 @@
 ---
 - :size: 40
   :floor: '2'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze ul. Nadwiślańska
   :location: 50.0469, 19.9512
   :url: http://dom.gratka.pl/tresc/401-69154375-malopolskie-krakow-podgorze-nadwislanska.html
@@ -14,9 +13,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Podgórze
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 52
   :floor: '2'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Dębniki ul. Chmieleniec
   :location: 50.0189, 19.8985
   :url: http://dom.gratka.pl/tresc/401-28845233-malopolskie-krakow-debniki-chmieleniec.html
@@ -29,9 +29,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Dębniki
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 60
   :floor: parter
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków
   :location: 50.0999, 20.0109
   :url: http://dom.gratka.pl/tresc/401-69005069-malopolskie-krakow.html
@@ -44,9 +45,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 40
   :floor: '2'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Krowodrza, Czarna Wieś
   :location: 50.0737, 19.9066
   :url: http://dom.gratka.pl/tresc/401-69074657-malopolskie-krakow-krowodrza-czarna-wies.html
@@ -59,9 +61,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Krowodrza
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 58
   :floor: '1'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Olsza ul. Piotra Trębacza
   :location: 50.0813, 19.9598
   :url: http://dom.gratka.pl/tresc/401-68563589-malopolskie-krakow-olsza-piotra-trebacza.html
@@ -74,9 +77,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Olsza
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 35
   :floor: 'parter'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Ugorek ul. Długa 47
   :location: 50.0702, 19.9371
   :url: http://dom.gratka.pl/tresc/401-69134519-malopolskie-krakow-ugorek-dluga-47.html
@@ -89,9 +93,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Ugorek
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 72
   :floor: '4'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze ul. Bujaka
   :location: 50.0099, 19.948
   :url: http://dom.gratka.pl/tresc/401-68639567-malopolskie-krakow-podgorze-bujaka.html
@@ -104,9 +109,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Podgórze
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 60
   :floor: '2'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Podgórze - Dębniki Ruczaj ul. Zbrojarzy
     Bezpośrednio
   :location: 50.0228, 19.9188
@@ -121,9 +127,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Podgórze - Dębniki Ruczaj
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 23
   :floor: '1'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Azory ul. Gdyńska
   :location: 50.0772, 19.9062
   :url: http://dom.gratka.pl/tresc/401-69158575-malopolskie-krakow-azory-gdynska.html
@@ -136,9 +143,10 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Azory
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
 - :size: 32.78
   :floor: '3'
-  :type: mieszkaniedowynajęcia
   :title: Mieszkanie | Mam do wynajęcia | Kraków Nowa Huta, Czyżyny
   :location: 50.0705, 20.0177
   :url: http://dom.gratka.pl/tresc/401-68952273-malopolskie-krakow-nowa-huta-czyzyny.html
@@ -151,3 +159,5 @@
   :county: Powiat Kraków
   :city: Gmina Kraków
   :district: Kraków Nowa Huta
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem

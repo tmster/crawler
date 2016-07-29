@@ -83,8 +83,12 @@ class GratkaPage < Base
       .join(' ')
   end
 
-  def type
-    location_node.split(' ')[0..2].join('')
+  def estate_type
+    title.split(' | ').first
+  end
+
+  def offer_type
+    OfferTypeNormalizer.new(title.split(' | ')[1]).call
   end
 
   private
