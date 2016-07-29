@@ -61,7 +61,7 @@ class GratkaPage < Base
   end
 
   def street
-    address.split(', ')[1]
+    short_title.split(', ')[1]
   end
 
   def county
@@ -73,18 +73,18 @@ class GratkaPage < Base
   end
 
   def district
-    address.split(', ').first
+    short_title.split(', ').first.split(' ').drop(1).join(' ')
   end
 
   def address
-    node
-      .root
-      .at_css('#karta-naglowek > div:nth-child(1) > div > h2')
-      .text
-      .strip
+    location_node
       .split(' ')
       .drop(3)
       .join(' ')
+  end
+
+  def type
+    location_node.split(' ')[0..2].join('')
   end
 
   private
@@ -93,5 +93,13 @@ class GratkaPage < Base
     @details_node ||= node
                       .root
                       .at_xpath('//*[@id="dane-podstawowe"]/div/div[2]/ul')
+  end
+
+  def location_node
+    @location_node ||= node
+                       .root
+                       .at_css('#karta-naglowek > div:nth-child(1) > div > h2')
+                       .text
+                       .strip
   end
 end
