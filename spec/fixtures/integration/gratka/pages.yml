@@ -161,3 +161,72 @@
   :district: Kraków Nowa Huta
   :estate_type: Mieszkanie
   :offer_type: Wynajem
+- :size: 30.0
+  :floor: '2'
+  :title: Mieszkanie | Sprzedam | Kraków Podgórze Duchackie, Wola Duchacka ul. Włoska
+  :location: 50.0174, 19.9703
+  :url: http://dom.gratka.pl/tresc/397-68958337-malopolskie-krakow-podgorze-duchackie-wola-duchacka-wloska.html
+  :address: Kraków Podgórze Duchackie, Wola Duchacka ul. Włoska, Powiat Kraków, Gmina
+    Kraków
+  :short_title: Mieszkanie Kraków Podgórze Duchackie, Wola Duchacka, ul. Włoska
+  :price: '245000'
+  :additional_price: '280'
+  :rooms: '2'
+  :street: Wola Duchacka
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Podgórze Duchackie
+  :estate_type: Mieszkanie
+  :offer_type:
+- :size: 74.0
+  :floor: '1'
+  :title: Mieszkanie 4-pokojowe, 74 m2, 1 piętro, 32-020 Kraków, Skotniki, Unruga Świetna
+    lokalizacja, Powiat Kraków, Gmina Kraków
+  :location: 50.0197, 19.8673
+  :url: http://dom.gratka.pl/deweloperzy/tresc/422-67135269-1-.html
+  :address: 32-020 Kraków Skotniki ul. Unruga Świetna Lokalizacja, Powiat Kraków, Gmina
+    Kraków
+  :short_title: Nowe mieszkanie Kraków Skotniki, ul. Unruga Świetna Lokalizacja
+  :price: '405500'
+  :additional_price:
+  :rooms: '4'
+  :street: ul. Unruga Świetna Lokalizacja
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: mieszkanie Kraków Skotniki
+  :estate_type: Mieszkanie 4-pokojowe, 74 m2, 1 piętro, 32-020 Kraków, Skotniki, Unruga
+    Świetna lokalizacja, Powiat Kraków, Gmina Kraków
+  :offer_type:
+- :size: 200.0
+  :floor:
+  :title: Dom | Mam do wynajęcia | Kraków Bronowice Małe
+  :location: 50.0809, 19.8575
+  :url: http://dom.gratka.pl/tresc/406-69127331-malopolskie-krakow-bronowice-male.html
+  :address: Kraków Bronowice Małe, Powiat Kraków, Gmina Kraków
+  :short_title: Dom Kraków Bronowice Małe
+  :price: '5500'
+  :additional_price:
+  :rooms: '5'
+  :street:
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Bronowice Małe
+  :estate_type: Dom
+  :offer_type: Wynajem
+- :size: 300.0
+  :floor:
+  :title: Dom | Sprzedam | Kraków Krowodrza ul. Biernackiego
+  :location: 50.0725, 19.9254
+  :url: http://dom.gratka.pl/tresc/402-69160473-malopolskie-krakow-krowodrza-biernackiego.html
+  :address: 30-035 Kraków Krowodrza ul. Biernackiego, Powiat Kraków, Gmina Kraków
+  :short_title: Dom Kraków Krowodrza, ul. Biernackiego
+  :price: '2700000'
+  :additional_price:
+  :rooms: '5'
+  :street: ul. Biernackiego
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Krowodrza
+  :estate_type: Dom
+  :offer_type:
+

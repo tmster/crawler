@@ -33,12 +33,14 @@ class GratkaPage < Base
   end
 
   def floor
-    details_node
+    child_node = details_node
       .at_xpath('//text()[normalize-space() = \'Piętro\']')
+
+    child_node
       .parent
       .parent
       .at_css('div')
-      .text
+      .text if child_node
   end
 
   def rooms
