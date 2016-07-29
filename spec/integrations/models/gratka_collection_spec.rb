@@ -47,23 +47,32 @@ RSpec.describe GratkaCollection do
   end
 
   describe '#current_page' do
-    it 'returns correct page' do
-      expect(described_class.new(url).current_page).to eq 1
-      expect(described_class.new(url2).current_page).to eq 2
+    context 'rentals' do
+      it { expect(described_class.new(url).current_page).to eq 1 }
+    end
+
+    context 'real estate' do
+      it { expect(described_class.new(url2).current_page).to eq 1 }
     end
   end
 
   describe '#next_page' do
-    it 'returns next page' do
-      expect(described_class.new(url).next_page).to eq 2
-      expect(described_class.new(url2).next_page).to eq 3
+    context 'rentals' do
+      it { expect(described_class.new(url).next_page).to eq 2 }
+    end
+
+    context 'real estate' do
+      it { expect(described_class.new(url2).next_page).to eq 2 }
     end
   end
 
   describe '#pages' do
-    it 'returns amount of pages' do
-      expect(described_class.new(url).pages).to eq 206
-      expect(described_class.new(url2).pages).to eq 206
+    context 'rentals' do
+      it { expect(described_class.new(url).pages).to eq 206 }
+    end
+
+    context 'real estate' do
+      it { expect(described_class.new(url2).pages).to eq 885 }
     end
   end
 end
