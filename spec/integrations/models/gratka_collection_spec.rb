@@ -3,11 +3,11 @@ require 'spec_helper'
 
 RSpec.describe GratkaCollection do
   include_context 'parser file helpers'
-
   let(:url) { 'http://dom.gratka.pl/mieszkania/krakow/wynajem/' }
   let(:url2) { 'http://dom.gratka.pl/mieszkania/krakow/wynajem/?s=2' }
 
   before do
+    setup_data('gratka')
     FakeWeb
       .register_uri(
         :get,

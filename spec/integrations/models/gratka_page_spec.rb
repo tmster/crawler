@@ -9,6 +9,7 @@ RSpec.describe GratkaPage do
 
   shared_examples_for 'check parser methods' do |page, index, url|
     before do
+      setup_data('gratka')
       FakeWeb
         .register_uri(
           :get,
