@@ -38,7 +38,7 @@ class OtodomCollection < Base
 
   def parse_urls
     collect_urls.map do |url|
-      GratkaPage.new(url)
+      OtodomPage.new(url)
     end
   end
 

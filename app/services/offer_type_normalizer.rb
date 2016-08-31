@@ -12,6 +12,7 @@ class OfferTypeNormalizer
   attr_reader :name
 
   def replace_phase
-    'Wynajem' if name == 'Mam do wynajęcia'
+    return 'Wynajem' if name == 'Mam do wynajęcia'
+    return 'Wynajem' if name && name.downcase == 'mieszkanie na wynajem'
   end
 end
