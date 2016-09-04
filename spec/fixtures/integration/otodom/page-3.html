@@ -1,0 +1,1555 @@
+	<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUPWFVVABACU1ZQAQMCUA=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script>
+		<title>2 pokoje, mieszkanie na wynajem - Kraków - Prądnik Czerwony - 45311766 • otodom.pl</title>
+						<meta name="robots" content="index, follow" />		<link rel="canonical" href="https://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html" />				<meta http-equiv="Content-Language" content="pl" />
+		<meta name="description" content="1 800 zł: Do wynajęcia od połowy września bardzo wysokiej klasy apartament z ogrodem. Mieszkanie znajduje się na parterze w kameralnym budynku o powierzchni 45 m2 przy ulicy  ul. Reduta - Kraków, Prądnik Cze..." />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+							<meta property="og:title" content="Mieszkanie, 45 m², Kraków"/>
+					<meta property="og:description" content="1 800 zł: Do wynajęcia od połowy września bardzo wysokiej klasy apartament z ogrodem. Mieszkanie znajduje się na parterze w kameralnym budynku o powierzchni 45 m2 przy ulicy  ul. Reduta - Kraków, Prądnik Cze..."/>
+					<meta property="og:type" content="website"/>
+					<meta property="og:url" content="https://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html"/>
+					<meta property="og:site_name" content="otodom.pl"/>
+					<meta property="og:image" content="https://img2.otodom.pl/images_otodompl/11416242_1_655x491.jpg"/>
+					<meta property="fb:app_id" content="1490856384482695"/>
+							<link rel="icon" type="image/x-icon" href="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/favicon.ico?v=4">
+								<!-- HEAD CONTRIB -->
+													    	    																		<link rel="stylesheet" type="text/css" href="https://otodom.pl/packed/sw7b5249b9cdee4ba186fc5178526528b9.css">
+																											<link rel="stylesheet" type="text/css" href="https://otodom.pl/packed/sw604c7a8435e1c6798c14a497c8e7e22d.css">
+																			<script type="text/javascript">
+				window.suggestmeyes_loaded = true;
+			    						var action='ad';
+			    						var method='index';
+			    						var user_logged=0;
+			    						var www_base='https://otodom.pl';
+			    						var www_base_no_namespace='https://otodom.pl';
+			    						var www_base_ajax='https://otodom.pl/ajax';
+			    						var static_files_www_base='https://otodom.pl/';
+			    						var external_static_files_www_base='https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/';
+			    						var external_static_files_www_base_main='https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web/static/';
+			    						var session_domain='otodom.pl';
+			    						var decimal_separator=',';
+			    						var thousands_separator=' ';
+			    						var sitecode='otodompl';
+			    						var defaultCurrency='PLN';
+			    						var config_currency='zł';
+			    						var useExternalScripts=1;
+			    						var lang='pl';
+			    						var hasRwd=1;
+			    						var module_rest_api=1;
+			    						var module_districts=1;
+			    						var module_business_users=1;
+			    						var module_answers_with_phone=1;
+			    						var module_ap_invoice_data=1;
+			    						var module_einvoice_olxpl=1;
+			    						var module_postpay=1;
+			    						var module_paid_for_post=1;
+			    						var module_export_olx=1;
+			    						var module_highlight_extended=1;
+			    						var module_optional_districts=1;
+			    						var module_full_geosuggest=1;
+			    						var module_export_service=1;
+			    						var module_mobile_app=1;
+			    						var module_gpt_banners=1;
+			    						var module_payupl_response=1;
+			    						var module_payupl_save_external_id=1;
+			    						var module_lite_api=1;
+			    						var module_invalidate_autologin_after_password_change=1;
+			    						var module_lead_factory=1;
+			    						var module_punish_no_image_on_business_listings=1;
+			    						var module_gross_prices_in_indexes_business=1;
+			    						var module_header_promo_tool=1;
+			    						var module_price_testing_tool=1;
+			    						var module_password_hashing=1;
+			    						var module_exclusive_offers=1;
+			    						var module_basecrm=1;
+			    						var module_quality_score_listing=1;
+			    						var module_header_promo_tool_for_investments=1;
+			    						var module_homepage_banner=1;
+			    						var module_smart_banner_apps=1;
+			    						var module_openstreetmaps_on_ad_detail_page=1;
+			    						var module_user_crm_lock=1;
+			    						var module_push_notifications=1;
+			    						var module_genitive_names=1;
+			    						var module_articles=1;
+			    						var module_investments=1;
+			    						var module_contract_templates=1;
+			    						var module_fast_activation_track=1;
+			    						var module_ssl_only=1;
+			    						var module_phone_swaps=1;
+			    						var module_duplicates_tool=1;
+			    						var android_url_contact_track='https://app.adjust.com/lzbgae';
+			    						var apple_url_contact_track='https://app.adjust.com/i2mmwy';
+			    						var mapkey='AIzaSyACOaRIOUSyleq3bO9rnKZiVlRD4D0IT2g';
+			    						var OSMTilesURL='//maps.otodom.pl/osm_tiles/{z}/{x}/{y}.png';
+			    						var fb_connect_url='https://connect.facebook.net/pl_PL/all.js#xfbml=1&amp;appId=1490856384482695';
+			    						var fb_app_id='1490856384482695';
+			    						var ad_title='Mieszkanie, 45 m², Kraków';
+			    						var region_id='6';
+			    						var subregion_id='410';
+			    						var city_id='38';
+			    						var cat_path='wynajem/mieszkanie';
+			    						var saveFavLink="https://otodom.pl/konto/?origin=observepopup&ref%5B0%5D%5Bdocument%5D=mieszkanie-45-m-krakow-ID347EV.html&ref%5B0%5D%5Baction%5D=ad&ref%5B0%5D%5Bmethod%5D=index";
+			    						var marker_default='https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/maps/marker_default.png';
+			    						var marker_zone='https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web/static/img/maps/marker_zone.png';
+			    						var adID='45311766';
+			    						var equal_address_provided='0';
+			    						var messageSent='';
+			    						var map_show_detailed='1';
+			    						var regionName="ma\u0142opolskie";
+			    						var subregionName="Krak\u00f3w";
+			    						var category_id='102';
+			    						var categoryName="Mieszkania";
+			    						var categoryCode="mieszkanie";
+			    						var categoryAdsenseText=null;
+			    						var root_category_id='2';
+			    						var rootCategoryName="Wynajem";
+			    						var rootCategoryCode="wynajem";
+			    						var rootCategoryAdsenseText=null;
+			    						var setSeoPageName="";
+			    						var ad_statistics_trend_charts="{\"price\":{\"label\":\"Cena\",\"avg_formated\":\"1 728\",\"avg\":1728.5,\"values\":[{\"month\":\"2016-04\",\"formated_value\":\"1 680\",\"value\":\"1680.85\",\"min\":\"1100\",\"max\":\"3000\",\"formated_min\":\"1 100\",\"formated_max\":\"3 000\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w kwi 2016\",\"suffix\":\"z\\u0142\"},{\"month\":\"2016-05\",\"formated_value\":\"1 674\",\"value\":\"1674.25\",\"min\":\"1100\",\"max\":\"3000\",\"formated_min\":\"1 100\",\"formated_max\":\"3 000\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w maj 2016\",\"suffix\":\"z\\u0142\"},{\"month\":\"2016-06\",\"formated_value\":\"1 739\",\"value\":\"1739.5\",\"min\":\"1150\",\"max\":\"3200\",\"formated_min\":\"1 150\",\"formated_max\":\"3 200\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w cze 2016\",\"suffix\":\"z\\u0142\"},{\"month\":\"2016-07\",\"formated_value\":\"1 716\",\"value\":\"1716.73\",\"min\":\"1200\",\"max\":\"3200\",\"formated_min\":\"1 200\",\"formated_max\":\"3 200\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w lip 2016\",\"suffix\":\"z\\u0142\"},{\"month\":\"2016-08\",\"formated_value\":\"1 784\",\"value\":\"1784.67\",\"min\":\"1100\",\"max\":\"3000\",\"formated_min\":\"1 100\",\"formated_max\":\"3 000\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w sie 2016\",\"suffix\":\"z\\u0142\"},{\"month\":\"2016-09\",\"formated_value\":\"1 775\",\"value\":\"1775\",\"min\":\"1100\",\"max\":\"3000\",\"formated_min\":\"1 100\",\"formated_max\":\"3 000\",\"label-max\":\"Max. cena\",\"label-min\":\"Min. cena\",\"label\":\"Cena wynajmu w wrz 2016\",\"suffix\":\"z\\u0142\"}]},\"sqm\":{\"label\":\"Cena za m&sup2;\",\"avg_formated\":\"35\",\"avg\":35.929383333333,\"values\":[{\"month\":\"2016-04\",\"formated_value\":\"34\",\"value\":\"34.6776\",\"min\":\"20.37\",\"max\":\"56.82\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"20\",\"formated_max\":\"56\",\"label\":\"Cena\\\/m&sup2; wynajmu w kwi 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"},{\"month\":\"2016-05\",\"formated_value\":\"35\",\"value\":\"35.4486\",\"min\":\"23.08\",\"max\":\"57.14\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"23\",\"formated_max\":\"57\",\"label\":\"Cena\\\/m&sup2; wynajmu w maj 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"},{\"month\":\"2016-06\",\"formated_value\":\"36\",\"value\":\"36.5331\",\"min\":\"21.92\",\"max\":\"62.96\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"21\",\"formated_max\":\"62\",\"label\":\"Cena\\\/m&sup2; wynajmu w cze 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"},{\"month\":\"2016-07\",\"formated_value\":\"35\",\"value\":\"35.6175\",\"min\":\"23.08\",\"max\":\"52.63\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"23\",\"formated_max\":\"52\",\"label\":\"Cena\\\/m&sup2; wynajmu w lip 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"},{\"month\":\"2016-08\",\"formated_value\":\"36\",\"value\":\"36.7853\",\"min\":\"20.54\",\"max\":\"53.33\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"20\",\"formated_max\":\"53\",\"label\":\"Cena\\\/m&sup2; wynajmu w sie 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"},{\"month\":\"2016-09\",\"formated_value\":\"36\",\"value\":\"36.5142\",\"min\":\"20.54\",\"max\":\"53.33\",\"label-max\":\"Max. cena\\\/m&sup2;\",\"label-min\":\"Min. cena\\\/m&sup2;\",\"formated_min\":\"20\",\"formated_max\":\"53\",\"label\":\"Cena\\\/m&sup2; wynajmu w wrz 2016\",\"suffix\":\"z\\u0142\\\/m&sup2;\"}]}}";
+			    						var gemius_identifier=new String('B9ObwqrN5EKhtd5Zuz.M.5cifZrIGzuGnN4UGpUaf8z.G7');
+			    						var smart_banner_days_hidden=7;
+			    						var smart_banner_days_reminder=7;
+			    						var siteCountryCode='pl';
+			    			    function __(txt) {
+				if (typeof translations == 'object') {
+							if (translations[txt] == undefined) {
+								return txt;
+							} else {
+								return translations[txt];
+							}
+				}
+				return txt;
+			    }
+			</script>
+		        <!--[if lt IE 9]>
+        	<script type="text/javascript" src="https://otodom.pl/js/scripts/html5shiv.min.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+    var csrfToken = '904a79fc30eaa88b6797c1c8ba54ab746fe14f91a2699ae926130d35cfc196bc';
+</script>
+
+    <meta name="apple-itunes-app" content="app-id=830421016,app-argument=https://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html">
+    <meta name="google-play-app" content="app-id=pl.otodom">
+    <meta property="al:ios:url" content="app-otodompl://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html?referral=123" />
+    <meta property="al:ios:app_store_id" content="830421016" />
+    <meta property="al:ios:app_name" content="Otodom" />
+    <meta property="al:android:url" content="app-otodompl://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html?referral=123" />
+    <meta property="al:android:app_name" content="Otodom" />
+    <meta property="al:android:package" content="pl.otodom" />
+    <meta property="al:web:url" content="https://otodom.pl/" />
+    <meta property="al:web:should_fallback" content="false" />
+    <link rel="apple-touch-icon" href="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/app-icon.png">
+    <link rel="android-touch-icon" href="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/app-icon.png">
+
+	</head>
+	<body class="detailpage">
+	    		    	<script>
+		dataLayer = [];
+	</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5C24V3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5C24V3');</script>
+<!-- End Google Tag Manager -->
+
+<script type='text/javascript'>
+    // Conversion Name: otoDom_LP_2015
+    //var ebRand = Math.random()+'';
+    //ebRand = ebRand * 1000000;
+    //<![CDATA[
+    //document.write('<scr'+'ipt src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=694722&amp;rnd=' + ebRand + '"></scr' + 'ipt>');
+    //]]>
+</script>
+<!--<noscript>
+    <img width="1" height="1" style="border:0" src="HTTP://bs.serving-sys.com/Serving/ActivityServer.bs?cn=as&amp;ActivityID=694722&amp;ns=1"/>
+</noscript>-->
+	    	        <!-- Start: GPT -->
+                <script type='text/javascript'>
+                var gptadslots=[];
+                var googletag = googletag || {};
+                googletag.cmd = googletag.cmd || [];
+                (function(){ var gads = document.createElement('script');
+                    gads.async = true; gads.type = 'text/javascript';
+                    var useSSL = 'https:' == document.location.protocol;
+                    gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+                    var node = document.getElementsByTagName('script')[0];
+                    node.parentNode.insertBefore(gads, node);
+                })();
+            </script>
+
+            <script type="text/javascript">
+                var GPT = GPT || {};
+                GPT.slots = [{"divId":"div-gpt-adpage-additional-box-gallery","adUnitId":"AdPage\/AdditionalBoxGallery","adUnitSizes":"[[300,250]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-adpage-billboard","adUnitId":"AdPage\/Billboard","adUnitSizes":"[[750,200],[750,100]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-adpage-halpage","adUnitId":"AdPage\/HalfPage","adUnitSizes":"[[300,250]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-adpage-textad-top","adUnitId":"AdPage\/TextAd_TOP","adUnitSizes":"[[280,20]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-adpage-textad-bottom","adUnitId":"AdPage\/TextAd_BOTTOM","adUnitSizes":"[[280,20]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-ad-1452517502914-0","adUnitId":"Mobile\/BoxGallery320x50_mobile","adUnitSizes":"[[320,50]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-ad-1452674845264-0","adUnitId":"Mobile\/BoxGallery300x250_mobile","adUnitSizes":"[[300,250]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-ad-1451902912475-0","adUnitId":"AdPage\/BoxGallery320x50","adUnitSizes":"[[320,50]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]},{"divId":"div-gpt-ad-1466591689492-0","adUnitId":"AdPage\/Halfpage_sec","adUnitSizes":"[[320,250]]","outOfPage":false,"targeting":[],"isCollapsing":false,"exclusion":false,"sizeMapping":[]}];
+                GPT.targeting = {"RegularUser":"n","Country":"Polska","ProperType":"mieszkanie","OfferType":"wynajem","Province":"malopolskie","Subregion":"powiat-krakow","City":"krakow","Title":"TWllc3prYW5pZSwgNDUgbcKyLCBLcmFrw7N3","Photo":"aHR0cHM6Ly9pbWcyLm90b2RvbS5wbC9pbWFnZXNfb3RvZG9tcGwvMTE0MTYyNDJfMV82NTV4NDkxLmpwZw==","Price":"1800","Rent":"300","Rooms_num":["2"],"Building_type":["block"],"Floor_no":["ground_floor"],"Building_floors_num":"3","Windows_type":["plastic"],"Heating":["other"],"Build_year":"2013","Construction_status":["ready_to_use"],"Security_types":["monitoring"],"Media_types":["cable-television","internet","phone"],"Extras_types":["balcony","garage","lift"],"Area":"45","env":"production"};
+                window.responsiveDFPSlots = new Array();
+                var i = 0;
+                googletag.cmd.push(function() {
+                                            gptadslots['div-gpt-adpage-additional-box-gallery'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/AdditionalBoxGallery', [[300,250]], 'div-gpt-adpage-additional-box-gallery')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-adpage-billboard'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/Billboard', [[750,200],[750,100]], 'div-gpt-adpage-billboard')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-adpage-halpage'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/HalfPage', [[300,250]], 'div-gpt-adpage-halpage')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-adpage-textad-top'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/TextAd_TOP', [[280,20]], 'div-gpt-adpage-textad-top')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-adpage-textad-bottom'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/TextAd_BOTTOM', [[280,20]], 'div-gpt-adpage-textad-bottom')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-ad-1452517502914-0'] = googletag.defineSlot('/55100874/Otodom_pl/Mobile/BoxGallery320x50_mobile', [[320,50]], 'div-gpt-ad-1452517502914-0')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-ad-1452674845264-0'] = googletag.defineSlot('/55100874/Otodom_pl/Mobile/BoxGallery300x250_mobile', [[300,250]], 'div-gpt-ad-1452674845264-0')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-ad-1451902912475-0'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/BoxGallery320x50', [[320,50]], 'div-gpt-ad-1451902912475-0')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                                            gptadslots['div-gpt-ad-1466591689492-0'] = googletag.defineSlot('/55100874/Otodom_pl/AdPage/Halfpage_sec', [[320,250]], 'div-gpt-ad-1466591689492-0')                        
+                        
+                        
+                        
+                        .addService(googletag.pubads());
+
+
+                        // create some usefull javascript vars for the onResize event
+                                                i = i++;
+                    
+                    googletag.pubads().enableSingleRequest();
+                                        googletag.pubads().setTargeting('RegularUser',"n");
+                                        googletag.pubads().setTargeting('Country',"Polska");
+                                        googletag.pubads().setTargeting('ProperType',"mieszkanie");
+                                        googletag.pubads().setTargeting('OfferType',"wynajem");
+                                        googletag.pubads().setTargeting('Province',"malopolskie");
+                                        googletag.pubads().setTargeting('Subregion',"powiat-krakow");
+                                        googletag.pubads().setTargeting('City',"krakow");
+                                        googletag.pubads().setTargeting('Title',"TWllc3prYW5pZSwgNDUgbcKyLCBLcmFrw7N3");
+                                        googletag.pubads().setTargeting('Photo',"aHR0cHM6Ly9pbWcyLm90b2RvbS5wbC9pbWFnZXNfb3RvZG9tcGwvMTE0MTYyNDJfMV82NTV4NDkxLmpwZw==");
+                                        googletag.pubads().setTargeting('Price',"1800");
+                                        googletag.pubads().setTargeting('Rent',"300");
+                                        googletag.pubads().setTargeting('Rooms_num',["2"]);
+                                        googletag.pubads().setTargeting('Building_type',["block"]);
+                                        googletag.pubads().setTargeting('Floor_no',["ground_floor"]);
+                                        googletag.pubads().setTargeting('Building_floors_num',"3");
+                                        googletag.pubads().setTargeting('Windows_type',["plastic"]);
+                                        googletag.pubads().setTargeting('Heating',["other"]);
+                                        googletag.pubads().setTargeting('Build_year',"2013");
+                                        googletag.pubads().setTargeting('Construction_status',["ready_to_use"]);
+                                        googletag.pubads().setTargeting('Security_types',["monitoring"]);
+                                        googletag.pubads().setTargeting('Media_types',["cable-television","internet","phone"]);
+                                        googletag.pubads().setTargeting('Extras_types',["balcony","garage","lift"]);
+                                        googletag.pubads().setTargeting('Area',"45");
+                                        googletag.pubads().setTargeting('env',"production");
+                                        googletag.pubads().enableAsyncRendering();
+                    googletag.pubads().collapseEmptyDivs(true);
+                    googletag.enableServices();
+
+                });
+            </script>
+        <!-- End: GPT -->
+	    	    <header>
+    <div class="visible-print-block navbar-print">
+        <img src="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static//img/logo-print.gif" alt="Otodom. Najpopularniejszy serwis nieruchomości" width="180">
+    </div>
+    <nav class="navbar navbar-default  hidden-print">
+		<div class="container-fluid container-fluid-sm">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="https://otodom.pl" title="Otodom. Najpopularniejszy serwis nieruchomości">otodom.pl</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="https://otodom.pl/sprzedaz/mieszkanie/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ogłoszenia <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="https://otodom.pl/sprzedaz/mieszkanie/">na sprzedaż</a></li>
+							<li><a href="https://otodom.pl/wynajem/mieszkanie/">na wynajem</a></li>
+						</ul>
+					</li>
+											<li><a href="https://otodom.pl/inwestycje/home/">Oferty deweloperów <span class="sr-only">(current)</span></a></li>
+										<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Firmy <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="https://otodom.pl/companies/home/agency/">Biura nieruchomości</a></li>
+															<li><a href="https://otodom.pl/companies/developer/">Deweloperzy</a></li>
+													</ul>
+					</li>
+											<li><a href="https://otodom.pl/wiadomosci/">Artykuły</a></li>
+							      	</ul>
+		      	<div class="navbar-separator hidden-md hidden-lg"></div>
+				<ul class="nav navbar-nav navbar-right">
+					<script type="text/javascript">
+    observedNC = [];
+    observedNC['ads'] = [];
+    observedNC['searches'] = [];
+    observedNC['toSynchronize'] = '';
+</script>
+	<li class="dropdown">
+		<a href="#"  id="observed-counter" class="dropdown-toggle icon-star-rounded" data-toggle="dropdown" role="button" aria-expanded="false"   style="display:none">
+			<span class="visible-xs-inline-block visible-sm-inline-block">Obserwowane</span>
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu dropdown-menu-user" role="menu" id="dropdown-menu-user-observe">
+	        <li role="presentation" class="dropdown-header">Obserwowane</li>
+	        <li><a id="observed-ads-counter" href="https://otodom.pl/schowek/" >Ogłoszenia</a></li>
+	        <li><a id="observed-searches-counter" href="https://otodom.pl/schowek/wyszukiwania/" >Wyszukiwania</a></li>
+	    </ul>
+	</li>
+
+    <li id="topLoginArea">
+        <a href="https://otodom.pl/mojekonto/" id="topLoginLink" class="icon-user-rounded visible-xs-inline-block visible-sm-inline-block">
+        	<span>Logowanie</span>
+        </a><a href="https://otodom.pl/mojekonto/" class="visible-md-inline-block visible-lg-inline-block" style="text-align:center;padding:6px 6px 0;height:60px;">
+            <span class="icon-user-rounded" style="font-size:32px;line-height:1em;"></span>
+            <span style="display:block;font-size:12px;line-height:1.125em;">Moje konto</span>
+        </a>
+    </li>
+    <li class="navbar-adding">
+        <a href="https://otodom.pl/nowe-ogloszenie/">
+            Dodaj ogłoszenie        </a>
+    </li>
+
+		      	</ul>
+			</div><!-- /.navbar-collapse -->
+	  	</div><!-- /.container-fluid -->
+		<!-- for demonstration purposes only, forgive me Leandro -->
+			</nav>
+</header>
+
+<div class="article-offer">
+    
+    <div class="article-linepreview hidden">
+	<div class="preview-actions">
+		<div class="container-fluid container-fluid-sm container-fluid-sm-inset">
+            <div class="row">
+                <div class="row-md-height">
+                    <div class="col-md-9 col-md-height col-middle">
+                        To jest podgląd Twojego ogłoszenia - tak będzie ono prezentowane po zapisaniu zmian.                    </div>
+                    <div class="col-md-3 col-md-height col-middle">
+                        <div class="action-links">
+                            <a href="" class="btn btn-link">
+                                Popraw                            </a>
+                            <a href="" class="btn btn-default">
+                                Zatwierdź                                <span class="icon-next"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+            <section class="section-offer-title" data-main>
+        <div class="container-fluid container-fluid-sm container-fluid-sm-inset">
+        <div class="row">
+            <header class="col-md-offer-content">
+                <a href="https://otodom.pl/oferty/prev/" class="link-back hidden-sm hidden-xs hidden hidden-print" data-tracking="link_back" title="Kontynuuj szukanie nieruchomości Twoich marzeń">
+                    <span class="btn btn-default icon-prev"></span>
+                </a>
+                <h1>Mieszkanie, 45 m², Kraków</h1>
+                <address>
+                                            <p class="address-links"><a href="https://otodom.pl/wynajem/mieszkanie/" class="title">Mieszkanie na wynajem</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/">Kraków</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/pradnik-czerwony/">Prądnik Czerwony</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/ulica-reduta/">Reduta</a><span class="hidden-xs"> - <a href="#" class="address-link-map" data-toggle="modal" data-target=".map-modal-lg" data-tracking="show_map_top">Zobacz na mapie</a></span></p>
+                        <p class="address-text">Kraków, Prądnik Czerwony, Reduta</p>
+                                    </address>
+            </header>
+            <div class="offer-aside">
+                <div class="box-price">
+                        <strong class="box-price-value no-estimates">1 800 zł</strong>
+                <span class="box-price-text">/miesiąc</span>                    
+        <span class="box-price__placement hidden-sm hidden-xs hidden-print"><div id="div-gpt-adpage-textad-top"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-adpage-textad-top'); });</script></div><div id="div-gpt-adpage-textad-top-after"></div></span>
+</div>
+                <a href="#section-offer-contact" class="btn btn-default btn-contact scrollSpy"><i class="icon-message"></i>Kontakt</a>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="section-offer-gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offer-content">
+				                    <div class="gallery-box" id="offer-gallery" data-atlas-gallery>
+																			                        <a href="#" class="gallery-box-button-close icon-close" data-atlas-gallery-close></a>
+                        <div class="gallery-box-image" data-atlas-gallery-viewer>
+                            <a href="#" class="gallery-box-button-prev icon-prev" data-atlas-slider-prev></a>
+                            <a href="#" class="gallery-box-button-next icon-next" data-atlas-slider-next></a>
+                            <a href="#" class="gallery-box-image-item" data-atlas-gallery-viewer-item data-atlas-slider-item title="Kliknij w główne zdjęcie tego ogłoszenia mieszkanie na wynajem żeby zobaczyć wszystkie zdjęcia nieruchomości"><img src="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/blank.gif"></a>
+                        </div>
+                        <div class="gallery-box-thumbs hidden-print" data-atlas-gallery-thumbs>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_1_1280x1024.jpg" title="Zdjęcie 1 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="1" src="https://img3.otodom.pl/images_otodompl/11416242_1_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie1">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_2_1280x1024.jpg" title="Zdjęcie 2 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="2" src="https://img3.otodom.pl/images_otodompl/11416242_2_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie2">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_3_1280x1024.jpg" title="Zdjęcie 3 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="3" src="https://img1.otodom.pl/images_otodompl/11416242_3_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie3">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_4_1280x1024.jpg" title="Zdjęcie 4 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="4" src="https://img2.otodom.pl/images_otodompl/11416242_4_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie4">
+        						</a>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_5_1280x1024.jpg" title="Zdjęcie 5 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="5" src="https://img3.otodom.pl/images_otodompl/11416242_5_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie5">
+        						</a>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_6_1280x1024.jpg" title="Zdjęcie 6 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="6" src="https://img3.otodom.pl/images_otodompl/11416242_6_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie6">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_7_1280x1024.jpg" title="Zdjęcie 7 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="7" src="https://img1.otodom.pl/images_otodompl/11416242_7_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie7">
+        						</a>
+        					        						<a href="https://img3.otodom.pl/images_otodompl/11416242_8_1280x1024.jpg" title="Zdjęcie 8 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="8" src="https://img1.otodom.pl/images_otodompl/11416242_8_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie8">
+        						</a>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_9_1280x1024.jpg" title="Zdjęcie 9 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="9" src="https://img3.otodom.pl/images_otodompl/11416242_9_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie9">
+        						</a>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_10_1280x1024.jpg" title="Zdjęcie 10 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="10" src="https://img2.otodom.pl/images_otodompl/11416242_10_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie10">
+        						</a>
+        					        						<a href="https://img1.otodom.pl/images_otodompl/11416242_11_1280x1024.jpg" title="Zdjęcie 11 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="11" src="https://img2.otodom.pl/images_otodompl/11416242_11_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie11">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_12_1280x1024.jpg" title="Zdjęcie 12 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="12" src="https://img1.otodom.pl/images_otodompl/11416242_12_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie12">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_13_1280x1024.jpg" title="Zdjęcie 13 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="13" src="https://img3.otodom.pl/images_otodompl/11416242_13_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie13">
+        						</a>
+        					        						<a href="https://img3.otodom.pl/images_otodompl/11416242_14_1280x1024.jpg" title="Zdjęcie 14 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="14" src="https://img2.otodom.pl/images_otodompl/11416242_14_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie14">
+        						</a>
+        					        						<a href="https://img2.otodom.pl/images_otodompl/11416242_15_1280x1024.jpg" title="Zdjęcie 15 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="15" src="https://img1.otodom.pl/images_otodompl/11416242_15_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie15">
+        						</a>
+        					        						<a href="https://img3.otodom.pl/images_otodompl/11416242_16_1280x1024.jpg" title="Zdjęcie 16 mieszkanie na wynajem. Kliknij, żeby zobaczyć szczegóły" class="gallery-box-thumb-item" data-atlas-gallery-thumbs-item data-atlas-slider-item>
+        							<img width="96" height="72" data-photo-key="16" src="https://img1.otodom.pl/images_otodompl/11416242_16_184x138.jpg" alt="Mieszkanie na wynajem zdjęcie16">
+        						</a>
+        					                            <a href="#" class="gallery-box-button-prev icon-prev" data-atlas-slider-prev></a>
+                            <a href="#" class="gallery-box-button-next icon-next" data-atlas-slider-next></a>
+                        </div>
+					</div>
+				
+                                    <a title ='' href="#" class="icon-star button-observed observe-link hidden-print" data-statkey="ad.observed.right" rel="nofollow" data-id="45311766" data-tooltip-status="disabled" data-change-text="true" data-tracking="add_favourite">
+                    </a>
+                            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section-offer-aside container">
+    <aside class="offer-aside">
+        <div class="offer-aside-primary">
+                            <div class="offer-aside-group">
+                    <a id="section-offer-contact"></a>
+                    <div class="box-contact-info box-contact-info-business 
+ hidden-print">
+            <div class="box-person">
+            <a href="https://otodom.pl/shop/?search%5Bagent_id%5D=2183958&shop=2pV0" title="Zobacz wszystkie nieruchomości, z którymi pracuje Marcelina Gudzela, jeden z najlepszych profesjonalistów branży nieruchomości w miejscowości Kraków, Prądnik Czerwony, Reduta">        <span class="box-person-image" style="background-image:url(https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/user_placeholder.png)"></span>
+        </a>        <a class="box-person-name" href="https://otodom.pl/shop/?search%5Bagent_id%5D=2183958&shop=2pV0" title="Marcelina Gudzela">Marcelina Gudzela</a></div>
+                <div class="phone-spoiler">
+            <i class="icon-mobile-full phone-spoiler-icon"></i>
+            <span class="phone-number" data-id="347EV" data-path="phone" data-type="top">
+                <strong class="phone-spoiler-number">+48</strong>
+                <span class="phone-spoiler phone-spoiler-button" data-id="347EV" data-path="phone" data-type="top" title="Zobacz numer telefonu do Marcelina Gudzela">Wyświetl numer</span>
+            </span>
+        </div>
+                        </div>
+
+                    <div class="offer-contact hidden-print">
+	<div class="contact-flip-hidden contact-flip">
+		<h2 class="contact-flip-subtitle">
+			Dziękujemy, wysłaliśmy Twoje zapytanie		</h2>
+		<h1 class="contact-flip-title">
+			Pamiętaj, że w aplikacji<br>wszystko zrobisz<br>szybciej		</h1>
+		<div class="contact-flip-bottom">
+			<div class="contact-flip-links">
+				<a href="https://app.adjust.com/lzbgae" class="contact-flip-link" target="_blank"><img src="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/GooglePlayBt.png"></a>
+				<a href="https://app.adjust.com/i2mmwy" class="contact-flip-link" target="_blank"><img src="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/AppStoreBt.png"></a>
+			</div>
+			<div class="contact-flip-links mobile-only hidden">
+				<a href="#" class="contact-flip-link" target="_blank">
+					<p class="contact-flip-download-label">
+						Sprawdź!					</p>
+					<div class="contact-flip-download">
+						Zainstaluj					</div>
+				</a>
+			</div>
+			<div class="contact-flip-close">
+				Wróć do formularza <i class="icon-close"></i>
+			</div>
+		</div>
+		<img src="https://otodom.pl/naspersclassifieds-regional/verticalsre-atlas-web-otodompl/static/img/phone.png" class="contact-flip-image"/>
+	</div>
+    <a href="#" class="btn btn-default btn-toggle-form"><i class="icon-close"></i><span>Kontakt</span></a>
+            <form enctype="multipart/form-data" class="form-contact default quickcontact" id="contact-form" method="POST" novalidate="novalidate">
+                            <h3 class="offer-contact-title">Zapytaj ogłoszeniodawcę</h3>
+                        <fieldset>
+                <div class="form-group form-group-email focusbox float-label">
+                                            <input data-float-label type="email" class="form-control" id="ask-email" name="contact[email]" placeholder="Twój e-mail" value="">
+                        <p class="desc errorboxContainer"><small id="se_emailError"></small></p>
+                                    </div>
+                <div class="form-group form-group-phone focusbox float-label">
+                    <input data-float-label type="text" class="form-control" id="ask-phone" name="contact[phone]" placeholder="Twój numer telefonu" value="">
+                    <p class="desc errorboxContainer"><small id="se_phoneError"></small></p>
+                </div>
+                <div class="form-group form-group-text focusbox">
+                                            <textarea class="form-control" placeholder="" id="ask-text" name="contact[txt]">To mieszkanie na wynajem (ID w Otodom 45311766) wydaje mi się interesujące. Chętnie poznam więcej szczegółów przed umówieniem wizyty.&#13;&#10;&#13;&#10;Pozdrawiam.</textarea>
+                    
+                    <p class="desc errorboxContainer">
+                        <small class="ca6 lheight24" id="se_messageError"></small>
+                    </p>
+                </div>
+                                    <div class="form-group form-group-send-similar df_line filter-item" data-name="send-similar">
+                        <div class="df_checkbox df_checkbox_2 df_checkbox_2_light">
+                            <input type="checkbox" name="send-similar" id="send-similar" value="1" checked>
+                            <label for="send-similar"></label>
+                        </div>
+                        <label class="control-label" for="send-similar">Chcę otrzymać linki do podobnych ofert</label>
+                    </div>
+                                
+                <div class="form-group form-group-submit">
+                    <div class="loader spinning">
+                        <i class="icon-reload spinner"></i>
+                        <i class="icon-done success"></i>
+                        <i class="icon-close error"></i>
+                    </div>
+                    <input type="hidden" name="referral">
+                    <input type="hidden" name="contact[adId]" value="45311766">
+                    <button type="submit" class="btn btn-action contact-button">Wyślij wiadomość</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+                </div>
+                        <div class="box-social hidden-print">
+    <h5 class="box-title">Udostępnij to mieszkanie</h5>
+    <ul class="box-social-list">
+        <li class="box-social-item"><a data-tracking="twitter" id="twttr-share-button" href="http://www.twitter.com/share?url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Twitter" target="_blank"><i class="icon-badge-twitter"></i></a></li>
+        <li class="box-social-item"><a data-tracking="facebook" id="fb-share-button" href="http://www.facebook.com/dialog/feed?app_id=1490856384482695&link=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html&picture=https%3A%2F%2Fimg2.otodom.pl%2Fimages_otodompl%2F11416242_1_655x491.jpg&name=&caption=&description=&redirect_uri=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Facebook" target="_blank"><i class="icon-badge-facebook"></i></a></li>
+        <li class="box-social-item"><a data-tracking="gplus" id="gplus-share-button" href="https://plus.google.com/share?url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w GooglePlus" target="_blank"><i class="icon-badge-google-plus"></i></a></li>
+        <li class="box-social-item"><a data-tracking="linkedin" id="lkdn-share-button" href="https://www.linkedin.com/shareArticle?mini=true&summary=&source=https%3A%2F%2Fotodom.pl&url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Linkedin" target="_blank"><i class="icon-badge-linkedin"></i></a></li>
+    </ul>
+</div>
+            <div class="gallery-banner">
+    <div class="visible-lg hidden-print"><div id="div-gpt-ad-1452674845264-0"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1452674845264-0'); });</script></div><div id="div-gpt-ad-1452674845264-0-after"></div></div>
+    <div class="hidden-lg hidden-print"><div id="div-gpt-ad-1451902912475-0"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1451902912475-0'); });</script></div><div id="div-gpt-ad-1451902912475-0-after"></div></div>
+</div>
+        </div>
+        <div class="offer-aside-secondary">
+            <div class="offer-aside-group">
+                <div class="additional-buttons hidden-print">
+        <ul class="additional-buttons-list">
+        <li class="additional-buttons-item hidden-xs hidden-sm"><a href="#" class="btn btn-link" data-toggle="modal" data-target=".map-modal-lg" data-tracking="show_map_down" title="Zobacz na mapie to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta"><i class="icon-point"></i> Mapa</a></li>
+        <li class="additional-buttons-item hidden-xs hidden-sm"><a href="#" class="btn btn-link printPage" data-path="phone" data-id="347EV" data-type="print" title="Wydrukuj to ogłoszenie mieszkanie na wynajem"><i class="icon-print"></i> Drukuj</a></li>
+        <li class="additional-buttons-item"><a href="#" class="btn btn-link reportMe" data-tracking="report"><i class="icon-flag"></i> <span class="hidden-md hidden-lg">Zgłoś naruszenie zasad</span><span class="hidden-xs hidden-sm">Naruszenie</span></a></li>
+    </ul>
+</div>
+                <div class="box-social hidden-print">
+    <h5 class="box-title">Udostępnij to mieszkanie</h5>
+    <ul class="box-social-list">
+        <li class="box-social-item"><a data-tracking="twitter" id="twttr-share-button" href="http://www.twitter.com/share?url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Twitter" target="_blank"><i class="icon-badge-twitter"></i></a></li>
+        <li class="box-social-item"><a data-tracking="facebook" id="fb-share-button" href="http://www.facebook.com/dialog/feed?app_id=1490856384482695&link=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html&picture=https%3A%2F%2Fimg2.otodom.pl%2Fimages_otodompl%2F11416242_1_655x491.jpg&name=&caption=&description=&redirect_uri=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Facebook" target="_blank"><i class="icon-badge-facebook"></i></a></li>
+        <li class="box-social-item"><a data-tracking="gplus" id="gplus-share-button" href="https://plus.google.com/share?url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w GooglePlus" target="_blank"><i class="icon-badge-google-plus"></i></a></li>
+        <li class="box-social-item"><a data-tracking="linkedin" id="lkdn-share-button" href="https://www.linkedin.com/shareArticle?mini=true&summary=&source=https%3A%2F%2Fotodom.pl&url=https%3A%2F%2Fotodom.pl%2Foferta%2Fmieszkanie-45-m-krakow-ID347EV.html" title="Udostępnij znajomym to ogłoszenie mieszkanie na wynajem w miejscowości Kraków, Prądnik Czerwony, Reduta w Linkedin" target="_blank"><i class="icon-badge-linkedin"></i></a></li>
+    </ul>
+</div>
+                <!-- floating rectangle 300x250 -->
+<div class="box box-center visible-md visible-lg hidden-print"><div id="div-gpt-adpage-halpage"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-adpage-halpage'); });</script></div><div id="div-gpt-adpage-halpage-after"></div></div>
+<div class="box visible-xs visible-sm hidden-print"><div id="div-gpt-ad-1452517502914-0"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1452517502914-0'); });</script></div><div id="div-gpt-ad-1452517502914-0-after"></div></div>
+                    <div class="box-brand hidden-print">
+                    <h5 class="box-title">Biuro nieruchomości</h5>
+                <div class="col-sm-6 col-md-12 text-center">
+                                                                                                    <figure>
+    <img class="box-agency-image" src="https://img1.otodom.pl/images_agencja_nieruchomosci_otodompl/7472027_1_s.jpg" alt="To ogłoszenie mieszkanie na wynajem jest promowane przez jedno z najbardziej profesjonalnych biur nieruchomości, działające w miejscowości Kraków, Prądnik Czerwony, Reduta: Galton" />
+    <figcaption class="box-agency-name">Galton</figcaption>
+</figure>
+                                                                                </div>
+        <div class="col-sm-6 col-md-12 text-center">
+                            <p>Bujwida 1/9, 31-529, Kraków, małopolskie</p>
+                                                            <div class="phone-spoiler">
+                        <i class="icon-mobile-full phone-spoiler-icon"></i>
+                        <span class="phone-number-business" data-id="576352" data-path="phone" data-type="bottom" data-index="default">
+                            <strong class="phone-spoiler-number">730</strong>
+                            <span class="phone-spoiler-business phone-spoiler-button show-item" data-id="576352" data-path="phone" data-type="bottom" data-index="default" title='Zobacz numer telefonu do biura nieruchomości'>Wyświetl numer</span>
+                        </span>
+                    </div>
+                                    <div class="phone-spoiler">
+                        <i class="icon-mobile-full phone-spoiler-icon"></i>
+                        <span class="phone-number-business" data-id="576352" data-path="phone" data-type="bottom" data-index="1">
+                            <strong class="phone-spoiler-number">12 </strong>
+                            <span class="phone-spoiler-business phone-spoiler-button show-item" data-id="576352" data-path="phone" data-type="bottom" data-index="1" title='Zobacz numer telefonu do biura nieruchomości'>Wyświetl numer</span>
+                        </span>
+                    </div>
+                                    </div>
+        <div class="clearfix"></div>
+                    <a href="https://otodom.pl/shop/?shop=2pV0" class="btn btn-default" target="_blank">zobacz wszystkie nieruchomości</a>
+            </div>
+                                <!-- floating rectangle 300x250 bottom -->
+	<div class="box box-center visible-md visible-lg hidden-print"><div id="div-gpt-ad-1466591689492-0"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-ad-1466591689492-0'); });</script></div><div id="div-gpt-ad-1466591689492-0-after"></div></div>
+                            </div>
+        </div>
+    </aside>
+</section>
+    <section class="section-offer-title fixed hidden" data-fixed>
+    
+    <div class="container-fluid container-fluid-sm container-fluid-sm-inset">
+                                    <div class="price-lane">
+                    <div class="box-price">
+                        <strong class="box-price-value no-estimates">1 800 zł</strong>
+                <span class="box-price-text">/miesiąc</span>                    
+        <span class="box-price__placement hidden-sm hidden-xs hidden-print"><div id="div-gpt-adpage-textad-top"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-adpage-textad-top'); });</script></div><div id="div-gpt-adpage-textad-top-after"></div></span>
+</div>
+                </div>
+                                        <div class="area-lane">
+                <span class="light-text">powierzchnia</span>
+                <br>
+                <span class="big">45 m²</span>
+            </div>
+                            <div class="room-lane">
+                <span class="light-text">pokoje</span>
+                <br>
+                <span class="big">2</span>
+            </div>
+                <div class="address-lane">
+            <address>
+                                    <span class="inline-middle pin"><a href="#" class="hidden-xs" data-toggle="modal" data-target=".map-modal-lg" data-tracking="show_map_top"><i class="icon-point light-text"></i></a></span>
+                    <div class="inline-middle">
+                        <p class="address-links"><a href="https://otodom.pl/wynajem/mieszkanie/" class="title">Mieszkanie na wynajem</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/">Kraków</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/pradnik-czerwony/">Prądnik Czerwony</a>, <a href="https://otodom.pl/wynajem/mieszkanie/krakow/ulica-reduta/">Reduta</a></p>    
+                        <p class="address-text">Kraków, Prądnik Czerwony, Reduta</p>
+                    </div>
+                            </address>
+        </div>
+        <div class="contact-lane">
+            <a href="#section-offer-contact" class="btn btn-default btn-contact scrollSpy"><i class="icon-message"></i>Kontakt</a>
+        </div>
+    </div>
+</section>
+    <section class="section-offer-params">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offer-content">
+                <ul class="params-list">
+                    <li>
+                        <ul class="main-list">
+                            <li>cena <span><strong>1 800 zł</strong></span></li>
+<li>powierzchnia <span><strong>45 m²</strong></span></li>
+    <li>liczba pokoi <span><strong>2</strong></span></li>
+    <li>piętro <span><strong>parter</strong> (z 3)</span></li>
+                        </ul>
+                                                    <ul class="sub-list">
+                                                                                                            <li><strong>czynsz - dodatkowo:</strong> 300 zł</li>
+                                                                                                                                                <li><strong>rodzaj zabudowy:</strong> blok</li>
+                                                                                                                                                <li><strong>okna:</strong> plastikowe</li>
+                                                                                                                                                <li><strong>ogrzewanie:</strong> inne</li>
+                                                                                                                                                <li><strong>rok budowy:</strong> 2013 </li>
+                                                                                                                                                <li><strong>stan wykończenia:</strong> do zamieszkania</li>
+                                                                                                </ul>
+                                            </li>
+                                                                                                    <li>
+                                <h4>zabezpieczenia</h4>
+                                <ul class="dotted-list">
+                                                                            <li>monitoring / ochrona</li>
+                                    
+                                </ul>
+                            </li>
+                                                                                                            <li>
+                                <h4>media</h4>
+                                <ul class="dotted-list">
+                                                                            <li>telewizja kablowa</li>
+                                                                            <li> internet</li>
+                                                                            <li> telefon</li>
+                                    
+                                </ul>
+                            </li>
+                                                                                                            <li>
+                                <h4>informacje dodatkowe</h4>
+                                <ul class="dotted-list">
+                                                                            <li>balkon</li>
+                                                                            <li> garaż/miejsce parkingowe</li>
+                                                                            <li> winda</li>
+                                    
+                                </ul>
+                            </li>
+                                                                                                                <li class="hidden-print"><div id="div-gpt-adpage-textad-bottom"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-adpage-textad-bottom'); });</script></div><div id="div-gpt-adpage-textad-bottom-after"></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section-offer-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offer-content">
+                <div class="text-container hidden-text">
+                    <div class="text-contents">
+                        <h3>Opis</h3>
+                        <p>Do wynajęcia od połowy września bardzo wysokiej klasy apartament z ogrodem. Mieszkanie znajduje się na parterze w kameralnym budynku o powierzchni 45 m2 przy ulicy  ul. Reduta - Kraków, Prądnik Czerwony. </p><p>LOKALIZACJA: <br/>Mieszkanie znajduje się w nowoczesnym apartamentowcu z 2013 r., w dzielnicy Prądnik Czerwony. O jego atrakcyjności decyduje położenie w bliskiej okolicy Parku Wodnego, Centrum Handlowego Krokus, sklepów Alma, OBI oraz Castorama. Mieszkanie jest bardzo jasne i przestronne, wyposażone (sprzęt AGD, RTV). Przed budynkiem znajduje się parking. Jest to teren bezpieczny, ogrodzony (wjazd przez szlaban), z kontrolą dostępu oraz ochroną. W najbliższej okolicy znajdziemy kilka sklepów spożywczych (m.in. Biedronka), pizzerię, szkołę, przedszkole, przychodnię zdrowia, aptekę, siłownię, klub fitness oraz Kościół. <br/>Mieszkanie szczególnie polecam osobom pracującym, lubiącym aktywny wypoczynek, a także ciszę, komfort oraz bliskość terenów zielonych. <br/>Bardzo dobra komunikacja do centrum miasta. Liczne ścieżki rowerowe.<br/>Rozbudowana baza usług rozrywkowo - kulturalnych oferowanych między innymi przez Park Wodny, Multikino, Muzeum Lotnictwa Polskiego, Kraków Arena.</p><p>KOMUNIKACJA:<br/>Przystanek :Prądnik Czerwony<br/>Kursujące linie autobusowe: 125, 129,132, 138, 139, 142, 152, 182, 352, 601, 611 (linia nocna).</p><p>MIESZKANIE:<br/>Mieszkanie położone jest na parterze w kameralnym bloku z 2013 roku.<br/>W skład mieszkania wchodzą:<br/>- sypialnia wraz z łóżkiem małżeńskim, szafkami nocnymi, komodą,<br/>- salon wraz z rozkładaną stylową sofą, stolikiem barowym, szafką RTV, stolikiem kawowym, dywnem,<br/>- otwarta kuchnia wraz z meblami w zabudowie, zlewozmywakiem, piekarnikiem, lodówką, płytą elektryczną, okapem, zmywarką,<br/>- łazienka wraz z wanną oraz osłoną prysznicową, umywalką, toaletą, pralką, szuszarką,<br/>- przestronny hol wraz z szafą na ubrania, biżuterię,<br/>- garderoba w której bez problemu można zmieścić wszelkie rzeczy,<br/>- ogród z wyjście z salonu o powierzchni około 15 m2 z zielenią,</p><p>UWAGI:<br/>- wolne od 15 września,<br/>- ogród przynależny do mieszkania,<br/>- bliskość terenów zielonych, liczne ścieżki rowerowe,<br/>- teren ogrodzony z kontrolą dostępu,<br/>- świetna komunikacja miejska,<br/>- ogrzewanie i ciepła woda własna w budynku,<br/>- miejsce postojowe w garażu podziemnym za dodatkową opłatą 100 zł/m-c,<br/>- mieszkanie idealne dla osób pracujących w Quattro Business Park,<br/>- kaucja w wysokości: 3000 PLN (kaucja może zostać rozbita na 2 raty).</p><p>FINANSE:<br/>1800 PLN dla właściciela + około 350 PLN czynsz administracyjny (w tym ciepła i zimna woda, ogrzewanie, śmieci, fundusz remontowy, utrzymanie części wspólnych, ochrona) + prąd (około 70 PLN)+ Internet + telewizja w cenie 131 PLN. </p><p>Gorąco polecamy i zapraszamy do oglądania.</p><p>Biuro nieruchomości Galton.<br/>KONTAKT DO AGENTA:<br/>Marcelina Gudzela<br/>Tel: <span class="phone-spoiler-description" data-phone="+48 537 806 300">(<a href="#">pokaż&nbsp;numer</a>)</span><br/>Email: </p><p>Zapraszamy do zapoznania się z naszą pełną ofertą na <br/>Napisz do nas czego szukasz, a my pokażemy Ci nieruchomości w najlepszych cenach</p><p></p><p></p><p></p>
+                        <div class="print-contact visible-print-block">
+                            <h3>Kontakt</h3>
+                            <p>Marcelina Gudzela</p>
+                                                            <p><strong>Telefon</strong>: <span class="phone-number"></span></p>
+                                                    </div>
+                    </div>
+                </div>
+                <a class="btn-read-more">Pokaz wiecej...</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+            <section class="section-offer-map hidden-print">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offer-content">
+                    <div class="ad-map">
+                        <div class="loading-error">
+                            <div class="error-content">
+                                <span class="exclamation">!</span>
+                                <p>Błąd podczas ładowania mapy</p>
+                                <p>Prosimy spróbuj ponownie później</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4 class="ad-map-near ad-map-title">W pobliżu...</h4>
+                                <div id="adDetailInlineMapWrapper" class="ad-map-holder">
+                                    <div class="ad-map-scroll-mobile visible-xs"></div>
+                                    <div id="adDetailInlineMap" data-lat="50.09478847" data-lon="19.98252153" data-radius="0" data-poi-lat="50.09488500" data-poi-lon="19.97869260" class="ad-map-element"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="ad-map-location-holder">
+                                    <h4 class="ad-map-location ad-map-title"><i class="icon-point"></i> Reduta</h4>
+                                </div>
+
+                                <div class="poi-list">
+                                    <div class="poi-list-holder"></div>
+                                    <div class="poi-list-empty-message">
+                                        <h5 class="empty-message-text">Spróbuj oddalić mapę, żeby wyświetlić więcej punktów w tej okolicy.</h5>
+                                    </div>
+                                    <div class="loader spinning">
+                                        <i class="icon-reload spinner"></i>
+                                        <i class="icon-done success"></i>
+                                        <i class="icon-close error"></i>
+                                    </div>
+                                </div>
+
+                                <div class="hidden">
+                                    <div id="tplPoiType">
+                                        <h5 class="poi-group-title"><span></span> <i class="icon-arrow-up"></i></h5>
+                                        <div class="poi-item-holder">
+                                            <div class="pois-show-more">
+                                                <span class="show-more-text">Więcej punktów <i class="icon icon-arrow-down"></i></span>
+                                                <span class="show-less-text">Mniej punktów <i class="icon icon-arrow-up"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="poi-item" id="tplPoiItem">
+                                        <i class="poi-background"></i>
+                                        <h6 class="poi-name"><img class="poi-image"/> <span></span></h6>
+                                        <span class="poi-distance"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <section class="section-offer-statistics hidden-print">
+        <div class="container">
+            <h3 class="statistics-title">Raport cen ofertowych</h3>
+            <p class="statistics-subtitle">Na bazie cen w serwisie Otodom</p>
+            <div class="row">
+                <div class="col-md-offer-content">
+                                            <div class="box-statistics box-percentile">
+    <div class="header">
+        <h2 class="percentile-title">
+            <span class="percentile-location-text">Prądnik Czerwony</span>
+            : zakres cen ofertowych        </h2>
+        <h4 class="percentile-type">2-pokojowe mieszkania</h4>
+    </div>
+    <div class="percentile-inline-item bar">
+        <div class="percentile-bar-container">
+            <div class="percentile-bar percentile-bar-orange" data-percentile="80">
+                <div class="percentile-bar-balloon">
+                    <i class="icon-house-filled"></i>
+                    <span class="percentile-price-ad">1 800</span>
+                    <span class="percentile-price-currency">zł</span>
+                </div>
+                <div class="percentile-bar-ad"></div>
+            </div>
+            <div class="percentile-price-min">
+                <span class="color-gray-dark">Min.</span>
+                <div class="percentile-price-text">
+                    <span class="percentile-min-value">1 100</span>
+                    <span class="percentile-price-currency">zł</span>
+                </div>
+            </div>
+            <div class="percentile-price-max">
+                <span class="color-gray-dark">Max.</span>
+                <div class="percentile-price-text">
+                    <span class="percentile-max-value">3 000</span>
+                    <span class="percentile-price-currency">zł</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="percentile-inline-item info">
+        <p class="percentile-value">
+            <i class="icon-arrow-drop-down color-orange"></i>
+            <span>80</span>%
+        </p>
+        <p class="percentile-location-info">mieszkań w tej dzielnicy ma niższą cenę</p>
+    </div>
+    <div class="percentile-inline-item properties">
+        <h4 class="percentile-properties-title">Porównywalne mieszkania <wbr><span class="color-green">poniżej 1 800 zł</span></h4>
+        <div class="percentile-similar-container">
+                            <a class="percentile-image-inline" target="_blank" href="https://otodom.pl/oferta/lepkowskiego-pradnik-czerwony-2-pok-1800-zl-ID33yyA.html" title="Mieszkanie na wynajem Kraków Prądnik Czerwony Józefa Łepkowskiego - Łepkowskiego | Prądnik Czerwony | 2 pok. | 1800 zł - 1 800 zł">
+                    <span class="percentile-image-inline-item" style="background-image: url(https://img1.otodom.pl/images_otodompl/11189830_1_655x491_lepkowskiego-pradnik-czerwony-2-pok-1800-zl-krakow.jpg)" ></span>
+                </a>
+                            <a class="percentile-image-inline" target="_blank" href="https://otodom.pl/oferta/ul-sliczna-nowe-mieszkanie-dla-2-3osob-ID33oau.html" title="Mieszkanie na wynajem Kraków Wieczysta Śliczna - Ul. Śliczna! nowe mieszkanie dla 2-3osób - 1 800 zł">
+                    <span class="percentile-image-inline-item" style="background-image: url(https://img2.otodom.pl/images_otodompl/11124878_1_655x491_ul-sliczna-nowe-mieszkanie-dla-2-3osob-krakow.jpg)" ></span>
+                </a>
+                            <a class="percentile-image-inline" target="_blank" href="https://otodom.pl/oferta/mieszkanie-77-m-krakow-ID2Z5pu.html" title="Mieszkanie na wynajem Kraków Prądnik Czerwony Dobrego Pasterza - 77 m² - 3 pokoje - 1 800 zł">
+                    <span class="percentile-image-inline-item" style="background-image: url(https://img3.otodom.pl/images_otodompl/9449776_1_655x491.jpg)" ></span>
+                </a>
+                    </div>
+        <a class="btn btn-default" href="https://otodom.pl/wynajem/mieszkanie/krakow/pradnik-czerwony/?search%5Bregion_id%5D=6&search%5Bsubregion_id%5D=410&search%5Bfilter_enum_rooms_num%5D%5B0%5D=2&search%5Bfilter_float_price%3Ato%5D=1800">Wszystkie mieszkania poniżej 1 800 zł</a>
+    </div>
+</div>
+                                        <div class="box-statistics box-price-comparison">
+    <div class="clearfix header">
+        <h2 class="price-comparison-title pull-left">
+            <i class="icon"></i>Średnie ceny ofertowe            <span class="price-comparison-ad-type">2-pokojowe mieszkania</span>
+        </h2>
+        <ul class="price-comparison-tabs pull-right" role="tablist">
+            <li class="tab-item active" id="tab-price-comparison-absolute">
+                <a href="#price-comparison-absolute" aria-controls="price-comparison-absolute" role="tab" data-toggle="tab">Cena</a>
+            </li>
+            <li class="tab-item" id="tab-price-comparison-sqm">
+                <a href="#price-comparison-sqm" aria-controls="price-comparison-sqm" role="tab" data-toggle="tab">Cena/M&sup2;</a>
+            </li>
+            <li class="tab-item" id="tab-price-comparison-trend">
+                <a href="#price-comparison-trend" aria-controls="price-comparison-trend" role="tab" data-toggle="tab">Trend</a>
+            </li>
+            <li class="tab-item" id="tab-price-comparison-buy-vs-rent">
+                <a href="#price-comparison-buy-vs-rent" aria-controls="price-comparison-buy-vs-rent" role="tab" data-toggle="tab">Kup VS Wynajmij</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div role="tabpanel" class="price-comparison-tab-content tab-pane fade in active" id="price-comparison-absolute">
+             
+    <div class="price-comparison price-comparison-step">
+        <p class="price-comparison-location-level">Dzielnica</p>
+        <h3 class="price-comparison-subtitle">Prądnik Czerwony</h3>
+        <h4 class="price-comparison-description">od <strong>1 100</strong> zł do <strong>3 000</strong> zł</h4>
+        <div class="price-comparison-box">
+            <div class="price-comparison-data">
+                <dl>
+                    <dt class="text-uppercase">Ta oferta</dt>
+                    <dd>
+                        <span class="price-comparison-ad-price-sqm">1 800</span>
+                        <span class="price-comparison-suffix">zł</span>
+                    </dd>
+                </dl>
+                <span class="price-comparison-rank color-orange">
+                    <span>+1%</span>
+                    <i class="icon icon-arrow-drop-up"></i>
+                </span>
+                <dl>
+                    <dt class="text-uppercase">Śr. Cena</dt>
+                    <dd><span class="price-comparison-avg-price-sqm">1 775</span> <span class="price-comparison-suffix">zł</span></dd>
+                </dl>
+            </div>
+            <div class="price-comparison-chart" id="price-comparison-chart-ad" data-graph-value="36.842105263158" data-graph-color="orange"></div>
+            <p class="price-comparison-label">Cena 1% powyżej średniej</p>
+                                                <table class="price-comparison-table">
+                                                    <tr class="">
+                                <td></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>1 pokój</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix">śr.</span>
+                                    <span class="price-comparison-table-price">1 357</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                                    <tr class="price-comparison-table-self color-orange">
+                                <td><span class="price-comparison-table-label">Ta oferta</span></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>2 pokoje</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix"></span>
+                                    <span class="price-comparison-table-price">1 800</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                                    <tr class="">
+                                <td></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>3 pokoje</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix">śr.</span>
+                                    <span class="price-comparison-table-price">2 168</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                            </table>
+                                    </div>
+        <div class="price-comparison-step-toggles-item visible-xs" data-toggle-step>
+    <span class="rooms">2 pokoje</span><br>
+    <i class="icon-point"></i>
+    <span class="local">Kraków</span>
+    <i class="icon-next"></i>
+</div>
+
+    </div>
+ 
+    <div class="price-comparison price-comparison-step">
+        <p class="price-comparison-location-level">Miejscowość</p>
+        <h3 class="price-comparison-subtitle">Kraków</h3>
+        <h4 class="price-comparison-description">od <strong>480</strong> zł do <strong>12 000</strong> zł</h4>
+        <div class="price-comparison-box">
+            <div class="price-comparison-data">
+                <dl>
+                    <dt class="text-uppercase">Ta oferta</dt>
+                    <dd>
+                        <span class="price-comparison-ad-price-sqm">1 800</span>
+                        <span class="price-comparison-suffix">zł</span>
+                    </dd>
+                </dl>
+                <span class="price-comparison-rank color-green">
+                    <span>-12%</span>
+                    <i class="icon icon-arrow-drop-down"></i>
+                </span>
+                <dl>
+                    <dt class="text-uppercase">Śr. Cena</dt>
+                    <dd><span class="price-comparison-avg-price-sqm">2 046</span> <span class="price-comparison-suffix">zł</span></dd>
+                </dl>
+            </div>
+            <div class="price-comparison-chart" id="price-comparison-chart-ad_up" data-graph-value="11.458333333333" data-graph-color="green"></div>
+            <p class="price-comparison-label">Cena 12% poniżej średniej</p>
+                                                <table class="price-comparison-table">
+                                                    <tr class="">
+                                <td></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>1 pokój</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix">śr.</span>
+                                    <span class="price-comparison-table-price">1 573</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                                    <tr class="price-comparison-table-self color-green">
+                                <td><span class="price-comparison-table-label">Ta oferta</span></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>2 pokoje</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix"></span>
+                                    <span class="price-comparison-table-price">1 800</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                                    <tr class="">
+                                <td></td>
+                                <td class="price-comparison-table-title">
+                                    <i class="icon-house-filled"></i>
+                                    <span>3 pokoje</span>
+                                </td>
+                                <td>
+                                    <span class="price-comparison-table-prefix">śr.</span>
+                                    <span class="price-comparison-table-price">3 150</span>
+                                    <span class="price-comparison-table-suffix">zł</span>
+                                </td>
+                            </tr>
+                                            </table>
+                                    </div>
+        <div class="price-comparison-step-toggles-item visible-xs" data-toggle-step>
+    <span class="rooms">2 pokoje</span><br>
+    <i class="icon-point"></i>
+    <span class="local">Prądnik Czerwony</span>
+    <i class="icon-next"></i>
+</div>
+
+    </div>
+        </div>
+        <div role="tabpanel" class="price-comparison-tab-content tab-pane fade" id="price-comparison-sqm">
+             
+    <div class="price-comparison price-comparison-step">
+        <p class="price-comparison-location-level">Dzielnica</p>
+        <h3 class="price-comparison-subtitle">Prądnik Czerwony</h3>
+        <h4 class="price-comparison-description">od <strong>20</strong> zł/m&sup2; do <strong>53</strong> zł/m&sup2;</h4>
+        <div class="price-comparison-box">
+            <div class="price-comparison-data">
+                <dl>
+                    <dt class="text-uppercase">Ta oferta</dt>
+                    <dd>
+                        <span class="price-comparison-ad-price-sqm">40</span>
+                        <span class="price-comparison-suffix">zł/m&sup2;</span>
+                    </dd>
+                </dl>
+                <span class="price-comparison-rank color-orange">
+                    <span>+9%</span>
+                    <i class="icon icon-arrow-drop-up"></i>
+                </span>
+                <dl>
+                    <dt class="text-uppercase">Śr. Cena</dt>
+                    <dd><span class="price-comparison-avg-price-sqm">36</span> <span class="price-comparison-suffix">zł/m&sup2;</span></dd>
+                </dl>
+            </div>
+            <div class="price-comparison-chart" id="price-comparison-chart-sqm_ad" data-graph-value="59.34736200061" data-graph-color="orange"></div>
+            <p class="price-comparison-label">Cena/m&sup2; 9% powyżej średniej</p>
+                    </div>
+        <div class="price-comparison-step-toggles-item visible-xs" data-toggle-step>
+    <span class="rooms">2 pokoje</span><br>
+    <i class="icon-point"></i>
+    <span class="local">Kraków</span>
+    <i class="icon-next"></i>
+</div>
+
+    </div>
+ 
+    <div class="price-comparison price-comparison-step">
+        <p class="price-comparison-location-level">Miejscowość</p>
+        <h3 class="price-comparison-subtitle">Kraków</h3>
+        <h4 class="price-comparison-description">od <strong>1</strong> zł/m&sup2; do <strong>142</strong> zł/m&sup2;</h4>
+        <div class="price-comparison-box">
+            <div class="price-comparison-data">
+                <dl>
+                    <dt class="text-uppercase">Ta oferta</dt>
+                    <dd>
+                        <span class="price-comparison-ad-price-sqm">40</span>
+                        <span class="price-comparison-suffix">zł/m&sup2;</span>
+                    </dd>
+                </dl>
+                <span class="price-comparison-rank color-green">
+                    <span>-1%</span>
+                    <i class="icon icon-arrow-drop-down"></i>
+                </span>
+                <dl>
+                    <dt class="text-uppercase">Śr. Cena</dt>
+                    <dd><span class="price-comparison-avg-price-sqm">40</span> <span class="price-comparison-suffix">zł/m&sup2;</span></dd>
+                </dl>
+            </div>
+            <div class="price-comparison-chart" id="price-comparison-chart-sqm_ad_up" data-graph-value="27.56183745583" data-graph-color="green"></div>
+            <p class="price-comparison-label">Cena/m&sup2; 1% poniżej średniej</p>
+                    </div>
+        <div class="price-comparison-step-toggles-item visible-xs" data-toggle-step>
+    <span class="rooms">2 pokoje</span><br>
+    <i class="icon-point"></i>
+    <span class="local">Prądnik Czerwony</span>
+    <i class="icon-next"></i>
+</div>
+
+    </div>
+        </div>
+        <div role="tabpanel" class="price-comparison-tab-content tab-pane fade price-comparison-trend" id="price-comparison-trend">
+            <h5 class="price-comparison-trend-title"><strong>Prądnik Czerwony:</strong> średnie ofertowe ceny wynajmu</h5>
+            <div id="priceComparisonTrend" class="price-comparison-trend-chart"></div>
+            <div class="price-comparison-trend-options">
+                <div class="tpl-price-comparison-trend-option hidden">
+                    <div class="df_radio df_radio_2_orange df_radio_2_light">
+                        <input type="radio" name="trend_chart" value="" id="">
+                        <label for=""></label>
+                    </div>
+                    <label class="control-label" for=""><span></span></label>
+                </div>
+                <div class="price-comparison-trend-option price-comparison-trend-checkbox-input">
+                    <div class="df_checkbox df_checkbox_2 df_checkbox_2_light">
+                        <input type="checkbox" name="show_maxmin" value="" id="show_maxmin">
+                        <label for="show_maxmin"></label>
+                    </div>
+                    <label class="control-label" for="show_maxmin"><span>Pokaż max. i min.</span></label>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="price-comparison-tab-content tab-pane fade price-comparison-buy-vs-rent" id="price-comparison-buy-vs-rent">
+            <div class="row">
+            <div class="col-sm-6 text-center">
+            <div class="container">
+                <p class="color-green no-margin price-comparison-label">Wynajem</p>
+
+                <p class="big color-green">
+                                            <span class="this-ad"><span>Ta oferta</span></span>
+                                        <span class="price-comparison-value">1 800</span>
+                    <span class="small price-comparison-currency">zł/mc</span>
+                </p>
+                <p class="color-gray no-margin price-comparison-description">Lokalizacja: Prądnik Czerwony</p>
+                                    <p class="color-orange no-margin price-comparison-isabove">Cena powyżej średniej</p>
+                            </div>
+                            <div class="images-inline price-comparison-similar-container">
+                    <p class="price-comparison-simmilar-title similar color-green price-comparison-self">Porównywalne oferty</p>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/flat-mieszkanie-54m-krakow-srodmiescie-quattro-ID2zqnQ.html" title="Mieszkanie na wynajem Kraków Prądnik Czerwony Nabielaka - Flat Mieszkanie 54m KRAKÓW Śródmieście Quattro - 1 800 zł">
+                            <span class="inline-item" style="background-image: url(https://img1.otodom.pl/images_otodompl/2347051_1_655x491_flat-mieszkanie-54m-krakow-srodmiescie-quattro-krakow.jpg)"></span>
+                        </a>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/wynajme-bardzo-ladne-mieszkanie-w-krakowie-ID33WxU.html" title="Mieszkanie na wynajem Kraków Prądnik Czerwony ul. Dobrego Pasterza 29 - Wynajmę bardzo ładne mieszkanie w Krakowie - 1 800 zł">
+                            <span class="inline-item" style="background-image: url(https://img1.otodom.pl/images_otodompl/11346790_1_655x491_wynajme-bardzo-ladne-mieszkanie-w-krakowie-krakow.jpg)"></span>
+                        </a>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/mieszkanie-2-pokojowe-apartamenty-kaskada-ID33tFm.html" title="Mieszkanie na wynajem Kraków Prądnik Czerwony ul. Dobrego Pasterza - Mieszkanie 2 pokojowe, apartamenty Kaskada - 2 000 zł">
+                            <span class="inline-item" style="background-image: url(https://img3.otodom.pl/images_otodompl/11157238_1_655x491_mieszkanie-2-pokojowe-apartamenty-kaskada-krakow.jpg)"></span>
+                        </a>
+                                    </div>
+                    </div>
+            <div class="col-sm-6 text-center">
+            <div class="container">
+                <p class="color-green no-margin price-comparison-label">Kupno</p>
+
+                <p class="big color-green">
+                                        <span class="price-comparison-value">309 619</span>
+                    <span class="small price-comparison-currency">zł</span>
+                </p>
+                <p class="color-gray no-margin price-comparison-description">Średnia cena sprzedaży 2-pokojowego mieszkania w lokalizacji: Prądnik Czerwony</p>
+                            </div>
+                            <div class="images-inline price-comparison-similar-container">
+                    <p class="price-comparison-simmilar-title similar color-orange price-comparison-other">Porównywalne oferty</p>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/okazja-54-m2-ul-nuszkiewicza-pradnik-czerwony-ID33QhI.html" title="Mieszkanie na sprzedaż Kraków Prądnik Czerwony ul. mjr. Ryszarda Nuszkiewicza - OKAZJA 54 m2 ul. Nuszkiewicza - Prądnik Czerwony - 305 000 zł">
+                            <span class="inline-item" style="background-image: url(https://img3.otodom.pl/images_otodompl/11303772_2_655x491_okazja-54-m2-ul-nuszkiewicza-pradnik-czerwony-dodaj-zdjecia_rev002.jpg)"></span>
+                        </a>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/wysoki-standard-mieszkanie-krakow-ul-dominikanow-ID324VA.html" title="Mieszkanie na sprzedaż Kraków Prądnik Czerwony Dominikanów  32/27 - Wysoki standard Mieszkanie Kraków, ul. Dominikanów - 325 000 zł">
+                            <span class="inline-item" style="background-image: url(https://img3.otodom.pl/images_otodompl/10560106_1_655x491_wysoki-standard-mieszkanie-krakow-ul-dominikanow-krakow.jpg)"></span>
+                        </a>
+                                            <a class="price-comparison-similar" target="_blank" href="https://otodom.pl/oferta/2-pokojowe-50m2-ul-marcholta-blok-z-2009-r-ID2HKeG.html" title="Mieszkanie na sprzedaż Kraków Prądnik Czerwony Marchołta - 2 POKOJOWE - 50m2 - ul. Marchołta, Blok z 2009 r. - 330 000 zł">
+                            <span class="inline-item" style="background-image: url(https://img1.otodom.pl/images_otodompl/2359349_1_655x491_2-pokojowe-50m2-ul-marcholta-blok-z-2009-r-krakow_rev004.jpg)"></span>
+                        </a>
+                                    </div>
+                    </div>
+    </div>
+        </div>
+    </div>
+</div>
+
+                                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-offer-text updated">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offer-content">
+                <div class="text-details clearfix">
+                    <div class="left">
+                        <p>Nr oferty w Otodom: 45311766</p>
+                                                    <p>Nr oferty w biurze nieruchomości: 5182/3048/OMW</p>
+                                                <p>
+                                                            Liczba wyświetleń strony: 19
+                                                    </p>
+                    </div>
+                    <div class="right">
+                        <p>Data dodania: 01.09.2016</p>
+                        <p>Data aktualizacji: 01.09.2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section-offer-promo hidden-xs hidden-print">
+    <div class="container">
+        <div class="text-center">
+            <div id="div-gpt-adpage-billboard"><script type="text/javascript">googletag.cmd.push(function() { googletag.display('div-gpt-adpage-billboard'); });</script></div><div id="div-gpt-adpage-billboard-after"></div>        </div>
+    </div>
+</section>
+
+    <section class="section-offer-similar">
+    <div class="container-fluid container-fluid-sm container-fluid-sm-inset">
+        <h3>Inne oferty ogłoszeniodawcy</h3>
+        <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                <a title="Mieszkania o powierzchni 64 m² - Kraków, Kazimierz, Krakowska - zdjęcie 1" href="https://otodom.pl/oferta/mieszkanie-64-m-krakow-ID2EgIM.html"class="offer-photo-box developer-photo-box developer-photo-box-promo">
+                    <figure>
+                                                    <span class="img-cover" style="background-image:url(https://img2.otodom.pl/images_otodompl/3426353_1_655x491_rev011.jpg)"></span>
+                                                <figcaption>
+                            <span class="price">1 664 zł</span>
+                            <div class="title">
+                                <h4>Kraków, Kazimierz, Krakowska</h4>
+                                <p>Mieszkanie, 64 m², Kraków</p>
+                            </div>
+                            <div class="title-small">
+                                <p>64 m²</p>
+                            </div>
+                         </figcaption>
+                    </figure>
+                </a>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <a title="Mieszkania o powierzchni 80 m² - Kraków, Śródmieście, Mikołaja Zyblikiewicza - zdjęcie 1" href="https://otodom.pl/oferta/mieszkanie-80-m-krakow-ID2ELdy.html"class="offer-photo-box developer-photo-box developer-photo-box-promo">
+                    <figure>
+                                                    <span class="img-cover" style="background-image:url(https://img1.otodom.pl/images_otodompl/3538359_1_655x491_rev014.jpg)"></span>
+                                                <figcaption>
+                            <span class="price">1 600 zł</span>
+                            <div class="title">
+                                <h4>Kraków, Śródmieście, Mikołaja Zyblikiewicza</h4>
+                                <p>Mieszkanie, 80 m², Kraków</p>
+                            </div>
+                            <div class="title-small">
+                                <p>80 m²</p>
+                            </div>
+                         </figcaption>
+                    </figure>
+                </a>
+            </div>
+                        <div class="col-sm-6 col-md-4">
+                <a title="Mieszkania o powierzchni 45 m² - Kraków, Łagiewniki, Huculska - zdjęcie 1" href="https://otodom.pl/oferta/mieszkanie-45-m-krakow-ID344Uq.html"class="offer-photo-box developer-photo-box developer-photo-box-promo">
+                    <figure>
+                                                    <span class="img-cover" style="background-image:url(https://img3.otodom.pl/images_otodompl/11400560_1_655x491.jpg)"></span>
+                                                <figcaption>
+                            <span class="price">1 600 zł</span>
+                            <div class="title">
+                                <h4>Kraków, Łagiewniki, Huculska</h4>
+                                <p>Mieszkanie, 45 m², Kraków</p>
+                            </div>
+                            <div class="title-small">
+                                <p>45 m²</p>
+                            </div>
+                         </figcaption>
+                    </figure>
+                </a>
+            </div>
+                    </div>
+    </div>
+</section>
+    <div class="visible-xs-block visible-sm-block hidden-print">
+    <div class="btn-group btn-group-justified btn-group-detail" role="group" aria-label="...">
+        <div class="btn-group hidden-xs" role="group">
+            <a href="" class="btn btn-action btn-observe button-observed icon-star-filled observe-link" rel="nofollow" data-id="45311766" data-tooltip-status="disabled" data-change-text="true" data-tracking="add_favourite_rwd"><span class="visible-sm-inline observed-45311766">Observe</span></a>
+        </div>
+        <div class="btn-group hidden-xs" role="group">
+            <button type="button" class="btn btn-map btn-action icon-point" data-toggle="modal" data-target=".map-modal-lg" data-tracking="show_map_rwd"><span class="visible-sm-inline">Zobacz na mapie</span></button>
+        </div>
+                    <div class="btn-group" role="group">
+                <button type="button" class="btn btn-phone btn-action icon-call-out phone-spoiler instant-call" data-path="phone" data-id="347EV" data-type="rwd"><span class="phone-number visible-xs-inline">Zadzwoń</span><span class="visible-sm-inline phone-number">+48</span></button>
+            </div>
+                <div class="btn-group" role="group">
+            <a href="#section-offer-contact" class="btn btn-contact btn-action icon-message scrollSpy" data-tracking="message_rwd"><span class="visible-sm-inline">Kontakt</span><span class="visible-xs-inline">Wiadomość</span></a>
+        </div>
+    </div>
+</div>
+    <div class="modal fade map-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+                <button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title" id="myLargeModalLabel">Zobacz na mapie</h4>
+			</div>
+			<div class="map-center">
+				<i class="map-center-image icon-point"></i>
+			</div>
+			<div id="mapContainer" data-lat="50.09478847" data-lon="19.98252153" data-radius="0" class="ad-map-element"></div>
+
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <noindex>
+	<div id="report-form" class="modal fade" tabindex="-1"	role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true"></button>
+					<h4 class="modal-title">Zgłoś naruszenie</h4>
+				</div>
+				<div class="modal-body">
+					<form id="report-form-fill" class="modal-inner om-reasons" action="" method="post" autocomplete="off">
+						<fieldset class="modal-inner-row">
+							<ul class="checkboxlist">
+																	<li>
+										<input id="reason-out_of_date" type="radio" name="report[reason]" value="out_of_date" autocomplete="off">
+										<label for="reason-out_of_date"> Ogłoszenie nie jest aktualne</label>
+									</li>
+																	<li>
+										<input id="reason-wrong_location" type="radio" name="report[reason]" value="wrong_location" autocomplete="off">
+										<label for="reason-wrong_location"> Lokalizacja jest nieprawidłowa</label>
+									</li>
+																	<li>
+										<input id="reason-wrong_contact_data" type="radio" name="report[reason]" value="wrong_contact_data" autocomplete="off">
+										<label for="reason-wrong_contact_data"> Dane kontaktowe są nieprawidłowe</label>
+									</li>
+																	<li>
+										<input id="reason-without_the_consent_of_owner" type="radio" name="report[reason]" value="without_the_consent_of_owner" autocomplete="off">
+										<label for="reason-without_the_consent_of_owner"> Ofertę zamieszczono bez zgody właściciela nieruchomości</label>
+									</li>
+																	<li>
+										<input id="reason-other" type="radio" name="report[reason]" value="other" autocomplete="off">
+										<label for="reason-other"> Inny powód</label>
+									</li>
+															</ul>
+						</fieldset>
+						<fieldset class="textarea-box">
+							<div id="report_form_description_field" style="display:none">
+								<p>W polu poniżej opisz dlaczego ogłoszenie narusza nasze zasady:</p>
+								<div class="fblock">
+									<div class="focusbox">
+										<textarea id="report-textarea" class="required do-not-validate" name="report[content]" autocomplete="off"></textarea>
+									</div>
+									<p>
+										Pozostało znaków: <b class="report-countdown">1000</b>
+									</p>
+								</div>
+							</div>
+						</fieldset>
+						<div class="modal-actions">
+							<div class="modal-actions-row">
+								<input id="report-submit" class="btn-default om-button" type="submit" value="Wyślij" data-id="347EV">
+							</div>
+						</div>
+					</form>
+					<div id="report-form-confirmation" style="display: none">
+						<div class="modal-inner">
+    <h4>Dziękujemy za zgłoszenie.</h4>
+    <p>
+        Sprawdzimy czy ogłoszenie narusza nasze zasady. Ponieważ otrzymujemy wiele zgłoszeń, nie możemy na nie odpowiadać.        Jeśli chcesz się z nami skontaktować skorzystaj z formularza dostępnego <a href="https://otodom.pl/kontakt/">tutaj</a>.
+    </p>
+    <div class="modal-actions">
+        <div class="modal-actions-row">
+            <a href="" class="btn btn-default" data-dismiss="modal">Zamknij</a>
+        </div>
+    </div>
+</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</noindex>
+        
+</div>
+<footer id="footer" class="hidden-print">
+	<div class="container-fluid container-fluid-sm">
+			<div class="clearfix">
+	    <div class="social-box">
+	        <div class="fb-page" data-href="http://www.facebook.com/Otodom/" data-width="213" data-height="70" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/Otodom/"><a href="http://www.facebook.com/Otodom/">Otodom</a></blockquote></div></div>
+	    </div>
+	</div>
+		<div class="row">
+			<div class="col-md-4 col-md-links">
+				<h5>Otodom</h5>
+				<ul class="links list-unstyled">
+					<li><a href="https://otodom.pl/info/">O nas</a></li>
+					<li><a href="http://pomoc.otodom.pl/hc/pl">Centrum pomocy</a></li>
+					<li><a href="http://pomoc.otodom.pl/hc/pl/requests/new">Kontakt</a></li>
+					<li><a href="https://otodom.pl/konto/cennik/">Cennik</a></li>
+					<li><a href="https://otodom.pl/regulamin/warunki-wspolpracy/">Warunki współpracy</a></li>
+					<li><a href="https://otodom.pl/wiadomosci/nowosci-w-otodom-pl/polityka-prywatnosci-serwisu-otodom-id4595.html">Polityka prywatności</a></li>
+                    <li><a href="http://blog.otodom.pl">Blog</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4 col-md-links">
+				<h5>Usługi i narzędzia</h5>
+				<ul class="links list-unstyled">
+                    <li><a href="https://otodom.pl/info/advertisement/">Reklama</a></li>
+					                    	<li><a href="http://pomoc.otodom.pl/hc/pl/articles/203120562-JAK-MOG%C4%98-EKSPORTOWA%C4%86-OG%C5%81OSZENIA">Narzędzia dla biur</a></li>
+																<li><a href="https://otodom.pl/wzory-umow/">Wzory umów</a></li>
+																<li><a href="https://otodom.pl/sprzedaj-z-otodom/">Sprzedaj z Otodom</a></li>
+									</ul>
+			</div>
+			<div class="col-md-4 col-md-links">
+				<h5>Mapa strony</h5>
+				<ul class="links list-unstyled">
+					<li><a href="https://otodom.pl/mapa-kategorii/">Mapa kategorii</a></li>
+					<li><a href="https://otodom.pl/mapa-kategorii/miejscowosci/">Mapa miejscowości</a></li>
+											<li><a href="https://otodom.pl/wiadomosci/">Artykuły i porady</a></li>
+										<li><a href="https://otodom.pl/companies/agency/">Baza firm</a></li>
+                    <li><a href="http://joinolx.com/" target="_blank">Kariera</a></li>
+				</ul>
+			</div>
+		</div>
+                    <ul class="apps-links list-unstyled">
+                <li><a href="https://play.google.com/store/apps/details?id=pl.otodom&referrer=utm_source%3Dotodom.pl%26utm_medium%3Dcpc%26utm_campaign%3Dandroid-app-footer" title="Otodom. Serwis Nieruchomości - Google Play" class="googleplay"></a></li>
+                <li><a href="https://itunes.apple.com/pl/app/otodom/id830421016" title="Otodom. Serwis Nieruchomości - App Store" class="appstore"></a></li>
+            </ul>
+        		<div class="copyright text-center">
+			Korzystanie z serwisu oznacza akceptację <a href="https://otodom.pl/regulamin/" class="text-link">regulaminu</a>
+		</div>
+	</div>
+</footer>
+<div id="saveFavDiv" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title typeSearch">Wyszukiwanie zapisane w schowku</h4>
+				<h4 class="modal-title typeOffer">Ogłoszenie zapisane w schowku</h4>
+			</div>
+			<div class="modal-body">
+				<div class="modal-inner">
+					<h4 class="typeSearch">Wyszukiwanie zostało dodane do obserwowanych</h4>
+					<h4 class="typeOffer">Ogłoszenie dodane do obserwowanych</h4>
+					<div class="text-center">Zaloguj się na swoje konto, by zapamiętać je na "stałe"</div>
+					<div class="modal-actions">
+						<div class="modal-actions-row">
+							<a class="btn btn-default" href="https://otodom.pl/konto/?origin=observepopup">Zaloguj się</a>
+							<br/><br/>
+							<a class="btn btn-default" href="https://otodom.pl/konto/rejestracja/">Załóż konto</a>
+						</div>
+						<div class="modal-actions-row">
+							<a id="saveFavCancel" href="" class="text-link text-link-default">Nie, dziękuję</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="synchroFavDiv" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close icon-close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title typeSearch">Twoje obserwowane ogłoszenia i wyszukiwania</h4>
+			</div>
+			<div class="modal-body">
+				<div class="modal-inner">
+					<div class="inner"></div>
+					<div class="modal-actions">
+						<div class="modal-actions-row">
+							<a id="synchronizeObservedConfirm" class="text-link text-link-default" href="">Zapisz je na moim koncie</a>
+						</div>
+						<div class="modal-actions-row">
+							<a id="synchronizeObservedCancel" class="text-link text-link-default" href="">Nie obserwuj tych ogłoszeń i wyszukiwań</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="message_system" style="display: none">
+    <div class="inner">
+        <div class="messagesystem">
+            <p>
+                <span class="msg"></span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="hidden hidden-print" id="cookiesBar">
+    <a href="#" class="cookiesBarClose icon-close"></a>
+    <p>
+        Strona korzysta z plików cookies w celu realizacji usług i zgodnie z        <a href="https://otodom.pl/wiadomosci/nowosci-w-otodom-pl/polityka-prywatnosci-serwisu-otodom-id4595.html" target="_blank" class="cookiesBarClose">Polityką Plików Cookies</a>.
+        Możesz określić warunki przechowywania lub dostępu do plików cookies w Twojej przeglądarce    </p>
+</div>
+
+<div class="window-badge-mobile-container hidden-print">
+	<div class="window-badge-mobile" id="mobileAppsbadge">
+		<a href="https://otodom.pl/mobilne/" class="circle icon-mobile">
+			<span class="title">Otodom w Twoim Telefonie</span>
+		</a>
+		<a href="#" class="icon-close" id="mobileAppsbadgeClose"></a>
+	</div>
+</div>
+
+<div id="fakeloader"></div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.6";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>		<!-- BODY CONTRIB -->
+	    
+	    <script type="text/javascript">
+	<!--
+	xtnv = document;
+	xtsd = "https://LOGS1269"
+	xtsite = "549430";
+	xtcustom = {"page_name":"adpage","action_type":"loaded","posting_to_action":1,"ad_id":"45311766","poster_id":"576352","ad_photo":16,"poster_type":"business","category":"wynajem","subcategory":"mieszkanie","provinces":"malopolskie","cities":"powiat-krakow","user_status":"unlogged_user","order_by":""};
+	//-->
+</script>
+<noscript>
+	<img width="1" height="1" alt="" src="https://LOGS1269.ati-host.net/hit.xiti?s=549430&stc={"page_name":"adpage","action_type":"loaded","posting_to_action":1,"ad_id":"45311766","poster_id":"576352","ad_photo":16,"poster_type":"business","category":"wynajem","subcategory":"mieszkanie","provinces":"malopolskie","cities":"powiat-krakow","user_status":"unlogged_user","order_by":""}" >
+</noscript>
+	    							<script type="text/javascript" src="https://otodom.pl/packed/swad32a6e903a09abbaf56406d85c8f077.js"></script>
+												<script type="text/javascript" src="https://otodom.pl/packed/sw381ece1c74c860b000c9d5b661d42fc8.js"></script>
+									
+			    
+    <script src="https://cdn.optimizely.com/js/2093450101.js"></script>
+	    <!--APP R3NDR otodom.pl--><!--B4CK3ND OK-->
+	    <!-- BOTTOM CONTRIB -->
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8c376650ae","applicationID":"27726256","transactionName":"YlVWMEQDDUZQUkZYDVsfYRZfTQpbVVRKHxJdQA==","queueTime":0,"applicationTime":428,"atts":"ThJVRgwZHkg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+<!-- tablica-dc4-87 -->

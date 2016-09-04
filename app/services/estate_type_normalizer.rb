@@ -12,6 +12,9 @@ class EstateTypeNormalizer
   attr_reader :name
 
   def replace_phase
-    'Mieszkanie' if name.downcase == 'mieszkanie na wynajem'
+    return 'Mieszkanie' if name && name.downcase == 'mieszkanie na wynajem'
+    return 'Mieszkanie' if name && name.downcase == 'mieszkanie na sprzedaż'
+    return 'Dom' if name && name.downcase == 'dom na wynajem'
+    return 'Dom' if name && name.downcase == 'dom na sprzedaż'
   end
 end

@@ -15,3 +15,99 @@
   :district: Kraków Podgórze
   :estate_type: Mieszkanie
   :offer_type: Wynajem
+- :size: 122.0
+  :floor: '1'
+  :title: 4 pokoje, mieszkanie na wynajem - Kraków - Wola Justowska - 45118022 • otodom.pl
+  :location: 50.05985630, 19.90032630
+  :url: 'https://otodom.pl/oferta/wynajme-apartament-na-salwatorze-ID33jg2.html'
+  :address: Kraków, Wola Justowska, Emaus
+  :short_title: Wynajmę apartament na Salwatorze
+  :price: '5900'
+  :additional_price:
+  :rooms: '4'
+  :street: Emaus
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Wola Justowska
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
+- :size: 45.0
+  :floor: 'parter'
+  :title: 2 pokoje, mieszkanie na wynajem - Kraków - Prądnik Czerwony - 45311766 • otodom.pl
+  :location: 50.09478847, 19.98252153
+  :url: 'https://otodom.pl/oferta/mieszkanie-45-m-krakow-ID347EV.html'
+  :address: Kraków, Prądnik Czerwony, Reduta
+  :short_title: Mieszkanie, 45 m², Kraków
+  :price: '1800'
+  :additional_price: '300'
+  :rooms: '2'
+  :street: Reduta
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Prądnik Czerwony
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
+- :size: 40.0
+  :floor: '2'
+  :title: 1 pokój, mieszkanie na wynajem - Kraków - Prądnik Biały - 45311864 • otodom.pl
+  :location: 50.08705810, 19.93357680
+  :url: 'https://otodom.pl/oferta/okazja-1600-wysoki-standard-ID347Gv.html'
+  :address: Kraków, Prądnik Biały, Kluczborska
+  :short_title: Okazja 1600 wysoki standard
+  :price: '1600'
+  :additional_price:
+  :rooms: '1'
+  :street: ul. Kluczborska
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Prądnik Biały
+  :estate_type: Mieszkanie
+  :offer_type: Wynajem
+- :size: 250.0
+  :floor:
+  :title: 6 pokoje, dom na wynajem - Kraków - Swoszowice - 45309302 • otodom.pl
+  :location: 49.99576380, 19.95962480
+  :url: 'https://otodom.pl/oferta/podgorki-swoszowice-dom-250m2-6p-do-wynajecia-ID3471c.html'
+  :address: Kraków, Swoszowice, Podgórki
+  :short_title: Podgórki, Swoszowice dom 250m2 6p DO WYNAJĘCIA
+  :price: '5000'
+  :additional_price:
+  :rooms: '6'
+  :street: ul. Podgórki
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Swoszowice
+  :estate_type: Dom
+  :offer_type: Wynajem
+- :size: 55.0
+  :floor: parter
+  :title: 2 pokoje, mieszkanie na sprzedaż - Kraków - Łagiewniki-Borek Fałęcki - 45292870 • otodom.pl
+  :location: 50.02450000, 19.93195000
+  :url: 'https://otodom.pl/oferta/przepiekne-2-pok-55m2-z-ogrodkiem-i-garazem-ID342Ka.html'
+  :address: Kraków, Łagiewniki-Borek Fałęcki, Hoffmanowej
+  :short_title: Przepiękne 2 pok 55m2 z ogródkiem i garażem!
+  :price: '425000'
+  :additional_price:
+  :rooms: '2'
+  :street: Hoffmanowej
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Łagiewniki-Borek Fałęcki
+  :estate_type: Mieszkanie
+  :offer_type: Sprzedaż
+- :size: 218.0
+  :floor:
+  :title: 5 pokoje, dom na sprzedaż - Kraków - Płaszów - 44725718 • otodom.pl
+  :location: 50.06465010, 19.94497990
+  :url: 'https://otodom.pl/oferta/unikatowa-i-spokojna-okolica-plaszow-krakow-ID31Fcy.html'
+  :address: Kraków, Płaszów, okolica ulicy Przewóz
+  :short_title: Unikatowa i spokojna okolica, Płaszów, Kraków
+  :price: '630000'
+  :additional_price:
+  :rooms: '5'
+  :street: okolica ulicy Przewóz
+  :county: Powiat Kraków
+  :city: Gmina Kraków
+  :district: Kraków Płaszów
+  :estate_type: Dom
+  :offer_type: Sprzedaż

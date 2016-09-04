@@ -24,8 +24,12 @@ class OtodomPage < Base
   end
 
   def additional_price
-    details_node
+    additional_price_node = details_node
       .at_xpath('//text()[normalize-space() = \'czynsz - dodatkowo:\']')
+
+    return unless additional_price_node
+
+    additional_price_node
       .parent
       .parent
       .at_xpath('text()')
@@ -45,11 +49,11 @@ class OtodomPage < Base
   end
 
   def rooms
-    details_node
-      .at_xpath('//text()[normalize-space() = \'liczba pokoi\']')
+    node = details_node
+      .at_xpath('//text()[normalize-space() = \'liczba pokoi\']|//text()[normalize-space() = \'liczba pokoi:\']')
       .parent
-      .at_css('span strong')
-      .text
+
+    node.at_css('span strong') ? node.at_css('span strong').text : node.parent.at_xpath('text()').text.strip
   end
 
   def size
